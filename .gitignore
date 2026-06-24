@@ -1,0 +1,8 @@
+# 大型PDF文件（超过GitHub 100MB限制）
+作品集/
+*.pdf
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini

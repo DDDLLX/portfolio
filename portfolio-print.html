@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代恋雪 · 园林设计作品集 · 求职版</title>
+    <style>
+        /* ===== Print-Optimized Portfolio ===== */
+        /* Open in browser → Ctrl+P → Save as PDF */
+        /* Paper: A4 (210mm × 297mm) */
+
+        :root {
+            --page-w: 210mm;
+            --page-h: 297mm;
+            --margin: 16mm;
+            --content-w: 178mm;
+            --text: #2c2c2c;
+            --text-light: #5a5a5a;
+            --accent: #6b8f71;
+            --accent-light: #b0c9b5;
+            --accent-wash: #f0f5f1;
+            --line: #d8e0d8;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        /* ── Screen preview ── */
+        @media screen {
+            html { background: #e8e8e8; }
+            body {
+                width: var(--page-w);
+                margin: 40px auto;
+                background: white;
+                box-shadow: 0 4px 40px rgba(0,0,0,.18);
+                font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
+                color: var(--text);
+                line-height: 1.75;
+                letter-spacing: .02em;
+            }
+        }
+
+        /* ── Print ── */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            html { margin:0; padding:0; }
+            body {
+                width: var(--page-w);
+                margin: 0;
+                font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
+                color: var(--text);
+                line-height: 1.75;
+                letter-spacing: .02em;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .page { page-break-after: always; }
+            .page:last-child { page-break-after: auto; }
+            .no-break { page-break-inside: avoid; }
+        }
+
+        /* ── Page structure ── */
+        .page {
+            width: var(--page-w);
+            height: var(--page-h);
+            padding: var(--margin);
+            position: relative;
+            overflow: hidden;
+            background: white;
+        }
+
+        /* Decorative corner */
+        .page::after {
+            content: '';
+            position: absolute;
+            bottom: 10mm;
+            right: 12mm;
+            width: 18mm;
+            height: 18mm;
+            border-right: 1.5px solid var(--accent-light);
+            border-bottom: 1.5px solid var(--accent-light);
+            opacity: .5;
+            pointer-events: none;
+        }
+
+        /* ── Cover Page ── */
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(175deg, #fafcfa 0%, #f2f7f3 40%, #eaf0eb 100%);
+        }
+        .cover .logo-mark {
+            width: 42mm;
+            height: 42mm;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-light), #9bc0a5, #b8c9b0);
+            margin-bottom: 16mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18mm;
+            color: white;
+            box-shadow: 0 2mm 8mm rgba(107,143,113,.25);
+        }
+        .cover h1 {
+            font-size: 11mm;
+            font-weight: 300;
+            letter-spacing: .08em;
+            margin-bottom: 4mm;
+        }
+        .cover h1 strong { font-weight: 650; }
+        .cover .sub {
+            font-size: 4.5mm;
+            color: var(--text-light);
+            font-weight: 300;
+            letter-spacing: .06em;
+            margin-bottom: 10mm;
+        }
+        .cover .line {
+            width: 28mm;
+            height: 1.2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            margin-bottom: 10mm;
+        }
+        .cover .meta {
+            font-size: 3.5mm;
+            color: var(--text-light);
+            letter-spacing: .04em;
+            line-height: 2.2;
+        }
+        .cover .meta span { margin: 0 3mm; color: var(--accent-light); }
+
+        /* ── Section title page ── */
+        .section-title-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-wash);
+        }
+        .section-title-page .inner { text-align: center; }
+        .section-title-page .num {
+            font-size: 28mm;
+            font-weight: 200;
+            color: var(--accent-light);
+            line-height: 1;
+            letter-spacing: -.03em;
+        }
+        .section-title-page h2 {
+            font-size: 7mm;
+            font-weight: 400;
+            letter-spacing: .08em;
+            margin: 4mm 0;
+        }
+        .section-title-page .en {
+            font-size: 3.2mm;
+            text-transform: uppercase;
+            letter-spacing: .2em;
+            color: var(--accent);
+        }
+
+        /* ── Project pages ── */
+        .project-page { display: flex; flex-direction: column; }
+        .project-page .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 4mm;
+            margin-bottom: 6mm;
+            border-bottom: 1px solid var(--line);
+        }
+        .project-page .page-header .section-tag {
+            font-size: 2.8mm;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--accent);
+        }
+        .project-page .page-header .page-num {
+            font-size: 2.8mm;
+            color: #bbb;
+            letter-spacing: .06em;
+        }
+        .project-page h3 {
+            font-size: 5.5mm;
+            font-weight: 500;
+            letter-spacing: .04em;
+            margin-bottom: 2mm;
+        }
+        .project-page .desc {
+            font-size: 3.2mm;
+            color: var(--text-light);
+            margin-bottom: 5mm;
+            line-height: 1.65;
+        }
+        .project-page .img-area {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fafbfa;
+            border-radius: 2mm;
+            overflow: hidden;
+            min-height: 0;
+        }
+        .project-page .img-area img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* ── Spread (two images per page) ── */
+        .spread-page { display: flex; flex-direction: column; }
+        .spread-page .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 3mm;
+            margin-bottom: 4mm;
+            border-bottom: 1px solid var(--line);
+        }
+        .spread-page .page-header .section-tag {
+            font-size: 2.8mm;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--accent);
+        }
+        .spread-page .page-header .page-num {
+            font-size: 2.8mm;
+            color: #bbb;
+            letter-spacing: .06em;
+        }
+        .spread-page .pair {
+            flex: 1;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 3mm;
+            min-height: 0;
+        }
+        .spread-page .pair .cell {
+            display: flex;
+            flex-direction: column;
+            background: #fafbfa;
+            border-radius: 2mm;
+            overflow: hidden;
+        }
+        .spread-page .pair .cell .img-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+        }
+        .spread-page .pair .cell .img-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .spread-page .pair .cell .cap {
+            font-size: 2.6mm;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2mm 3mm;
+            letter-spacing: .03em;
+            background: white;
+        }
+
+        /* ── Three per page (for smaller images) ── */
+        .triple-page { display: flex; flex-direction: column; }
+        .triple-page .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 3mm;
+            margin-bottom: 4mm;
+            border-bottom: 1px solid var(--line);
+        }
+        .triple-page .page-header .section-tag {
+            font-size: 2.8mm;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--accent);
+        }
+        .triple-page .page-header .page-num {
+            font-size: 2.8mm;
+            color: #bbb;
+            letter-spacing: .06em;
+        }
+        .triple-page .trio {
+            flex: 1;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 2.5mm;
+            min-height: 0;
+        }
+        .triple-page .trio .cell {
+            display: flex;
+            background: #fafbfa;
+            border-radius: 2mm;
+            overflow: hidden;
+            gap: 2mm;
+            padding: 2mm;
+        }
+        .triple-page .trio .cell .img-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+        .triple-page .trio .cell .img-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .triple-page .trio .cell .cap {
+            font-size: 2.6mm;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            writing-mode: vertical-rl;
+            letter-spacing: .04em;
+            min-width: 8mm;
+            text-align: center;
+        }
+
+        /* ── Profile / About page ── */
+        .profile-page { display: flex; flex-direction: column; }
+        .profile-page .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 4mm;
+            margin-bottom: 6mm;
+            border-bottom: 1px solid var(--line);
+        }
+        .profile-page .page-header .section-tag {
+            font-size: 2.8mm;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--accent);
+        }
+        .profile-page .page-header .page-num {
+            font-size: 2.8mm;
+            color: #bbb;
+            letter-spacing: .06em;
+        }
+        .profile-page .cols {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8mm;
+            align-content: start;
+        }
+        .profile-page .cols .col h3 {
+            font-size: 4.5mm;
+            font-weight: 500;
+            margin-bottom: 4mm;
+            letter-spacing: .04em;
+        }
+        .profile-page .cols .col p {
+            font-size: 3.2mm;
+            color: var(--text-light);
+            margin-bottom: 3mm;
+            line-height: 1.7;
+        }
+        .profile-page .info-list {
+            list-style: none;
+            font-size: 3.2mm;
+            color: var(--text-light);
+            line-height: 2.4;
+            margin-bottom: 5mm;
+        }
+        .profile-page .info-list .lbl {
+            color: var(--accent);
+            margin-right: 2mm;
+            font-weight: 500;
+        }
+
+        /* ── Table of Contents ── */
+        .toc-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .toc-page h2 {
+            font-size: 7mm;
+            font-weight: 400;
+            letter-spacing: .06em;
+            margin-bottom: 10mm;
+            text-align: center;
+        }
+        .toc-page .toc-list { list-style: none; max-width: 120mm; margin: 0 auto; }
+        .toc-page .toc-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 4mm 0;
+            border-bottom: 1px dotted var(--line);
+            font-size: 3.8mm;
+        }
+        .toc-page .toc-list li .toc-num {
+            font-size: 3mm;
+            color: var(--accent);
+            margin-right: 4mm;
+            font-weight: 500;
+        }
+        .toc-page .toc-list li .toc-title { flex:1; }
+        .toc-page .toc-list li .toc-count {
+            font-size: 2.8mm;
+            color: #bbb;
+        }
+
+        /* ── End page ── */
+        .end-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(175deg, #fafcfa 0%, #f2f7f3 100%);
+        }
+        .end-page h1 {
+            font-size: 8mm;
+            font-weight: 300;
+            letter-spacing: .08em;
+            margin-bottom: 6mm;
+        }
+        .end-page .contact-info {
+            font-size: 3.8mm;
+            color: var(--text-light);
+            line-height: 2.4;
+            letter-spacing: .04em;
+        }
+        .end-page .motto {
+            margin-top: 10mm;
+            font-size: 3.5mm;
+            color: var(--accent);
+            font-style: italic;
+            letter-spacing: .06em;
+        }
+
+        /* ── Grid 2-column project page ── */
+        .grid2-page { display: flex; flex-direction: column; }
+        .grid2-page .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 4mm;
+            margin-bottom: 5mm;
+            border-bottom: 1px solid var(--line);
+        }
+        .grid2-page .page-header .section-tag {
+            font-size: 2.8mm;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: var(--accent);
+        }
+        .grid2-page .page-header .page-num {
+            font-size: 2.8mm;
+            color: #bbb;
+            letter-spacing: .06em;
+        }
+        .grid2-page h3 {
+            font-size: 4.5mm;
+            font-weight: 500;
+            letter-spacing: .04em;
+            margin-bottom: 4mm;
+        }
+        .grid2-page .grid2 {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3mm;
+            min-height: 0;
+        }
+        .grid2-page .grid2 .cell {
+            display: flex;
+            flex-direction: column;
+            background: #fafbfa;
+            border-radius: 2mm;
+            overflow: hidden;
+        }
+        .grid2-page .grid2 .cell .img-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 0;
+        }
+        .grid2-page .grid2 .cell .img-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .grid2-page .grid2 .cell .cap {
+            font-size: 2.4mm;
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5mm 2mm;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="page cover">
+    <div class="logo-mark">❀</div>
+    <h1><strong>代恋雪</strong> · 作品集</h1>
+    <p class="sub">PORTFOLIO · 园林设计 · 景观设计</p>
+    <div class="line"></div>
+    <p class="meta">
+        普洱学院 <span>·</span> 园林专业 <span>·</span> 2026届本科<br>
+        求职意向：景观设计师 / 景观设计师助理<br>
+        期望城市：重庆 · 杭州 / 可全国
+    </p>
+</div>
+
+<!-- ═══════════ PROFILE ═══════════ -->
+<div class="page profile-page">
+    <div class="page-header">
+        <span class="section-tag">Profile · 个人简介</span>
+        <span class="page-num">01</span>
+    </div>
+    <div class="cols">
+        <div class="col">
+            <h3>关于我</h3>
+            <p>我是普洱学院园林专业2026届毕业生。四年专业学习让我从对园林设计的美好憧憬，成长为具备扎实专业基础的准园林人。我相信园林设计是人与自然对话的艺术——一草一木的搭配、一石一水的布局，都能在无声中传递空间的情绪与温度。</p>
+            <p>我热爱手绘表达的即兴与灵动，也享受数字化设计带来的精确与高效，善于将手绘创意与计算机辅助设计相结合。</p>
+        </div>
+        <div class="col">
+            <h3>基本信息</h3>
+            <ul class="info-list">
+                <li><span class="lbl">姓名</span>代恋雪</li>
+                <li><span class="lbl">学校</span>普洱学院</li>
+                <li><span class="lbl">专业</span>园林（本科）</li>
+                <li><span class="lbl">毕业</span>2026年6月</li>
+                <li><span class="lbl">所在地</span>重庆</li>
+                <li><span class="lbl">电话</span>1589166476</li>
+                <li><span class="lbl">邮箱</span>1584824397@qq.com</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ EXPERIENCE ═══════════ -->
+<div class="page profile-page">
+    <div class="page-header">
+        <span class="section-tag">Experience · 经历</span>
+        <span class="page-num">02</span>
+    </div>
+    <div class="cols">
+        <div class="col">
+            <h3>教育背景</h3>
+            <p><strong>普洱学院 · 园林专业</strong><br>2022.09 — 2026.06</p>
+            <p style="margin-top:2mm;">主修：园林规划设计、园林植物学、园林工程、景观生态学、CAD制图、SketchUp建模、园林美术等。</p>
+            <h3 style="margin-top:6mm;">毕业设计</h3>
+            <p><strong>《碳中和背景下丰都县滨江绿地的韧性景观设计》</strong><br>2025.09 — 2026.05</p>
+            <p style="margin-top:2mm;">聚焦滨江绿地的生态韧性与碳中和策略，完成从前期分析到方案设计的全过程，获导师高度认可。</p>
+        </div>
+        <div class="col">
+            <h3>实习经历</h3>
+            <p><strong>九木堂装饰公司 · 设计助理</strong><br>2024.07 — 2024.09</p>
+            <p style="margin-top:2mm;">参与住宅庭院与阳台花园等户外景观空间设计，负责方案草图绘制、植物选型与配置、SU模型搭建及CAD施工图绘制，锻炼了从概念方案到施工落地的全流程能力。</p>
+            <p style="margin-top:4mm;"><strong>住建委 · 实习</strong><br>2025.07 — 2025.11</p>
+            <p style="margin-top:2mm;">参与古树名木保护整治方案编制、街边绿地园林设计、道路绿地景观设计等市政项目，积累了公共景观项目的实务经验。</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ SKILLS ═══════════ -->
+<div class="page profile-page">
+    <div class="page-header">
+        <span class="section-tag">Skills · 技能</span>
+        <span class="page-num">03</span>
+    </div>
+    <div class="cols">
+        <div class="col">
+            <h3>专业技能</h3>
+            <p><strong>植物配置设计</strong> — 熟悉西南地区常见园林植物，擅长乔灌草多层次搭配与季相变化设计。</p>
+            <p><strong>手绘表现</strong> — 具备扎实的手绘功底，能快速通过速写与马克笔表达设计构思与空间氛围。</p>
+            <p><strong>空间营造</strong> — 理解空间尺度与游憩行为的关系，注重游览体验的节奏感与叙事性。</p>
+        </div>
+        <div class="col">
+            <h3>&nbsp;</h3>
+            <p><strong>数字化设计</strong> — 熟练运用 AutoCAD、SketchUp、Lumion、Photoshop、Illustrator 等设计工具。</p>
+            <p><strong>生态韧性设计</strong> — 关注海绵城市、碳中和、韧性景观等理念，将生态思维融入设计全过程。</p>
+            <p><strong>施工图与工程</strong> — 具备园林施工图绘制基础，了解常用园林材料及施工工艺。</p>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ TOC ═══════════ -->
+<div class="page toc-page">
+    <h2>目 录</h2>
+    <ul class="toc-list">
+        <li><span class="toc-num">01</span><span class="toc-title">手绘作品</span><span class="toc-count">9幅</span></li>
+        <li><span class="toc-num">02</span><span class="toc-title">机绘 · 设计竞赛</span><span class="toc-count">3项</span></li>
+        <li><span class="toc-num">03</span><span class="toc-title">机绘 · 课堂作业</span><span class="toc-count">10幅</span></li>
+        <li><span class="toc-num">04</span><span class="toc-title">机绘 · 毕业设计</span><span class="toc-count">12幅</span></li>
+    </ul>
+</div>
+
+<!-- ═══════════ SECTION 1: 手绘 ═══════════ -->
+<div class="page section-title-page">
+    <div class="inner">
+        <div class="num">01</div>
+        <h2>手绘作品</h2>
+        <p class="en">Hand Drawings</p>
+    </div>
+</div>
+
+<!-- 手绘 p1: 3幅 -->
+<div class="page triple-page">
+    <div class="page-header">
+        <span class="section-tag">手绘作品 · Hand Drawings</span>
+        <span class="page-num">04</span>
+    </div>
+    <div class="trio">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/1cd5b3b5674e95f6a8a207f987e684cc.jpg" alt=""></div>
+            <span class="cap">景观速写（一）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/3b78b327397f19813faf8c146bb51d83.jpg" alt=""></div>
+            <span class="cap">景观速写（二）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/6e983dbbdca094cd393f454f4344345b.jpg" alt=""></div>
+            <span class="cap">景观速写（三）</span>
+        </div>
+    </div>
+</div>
+
+<!-- 手绘 p2: 3幅马克笔 -->
+<div class="page triple-page">
+    <div class="page-header">
+        <span class="section-tag">手绘作品 · Hand Drawings</span>
+        <span class="page-num">05</span>
+    </div>
+    <div class="trio">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/ab9f61dc0e9b7ec08291746d6828788e.jpg" alt=""></div>
+            <span class="cap">马克笔表现（一）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/c79807b8e7849dfdbcbf0eb38e942416.jpg" alt=""></div>
+            <span class="cap">马克笔表现（二）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/c8fa274bd150ae7e2bafb4c7be8f823e.jpg" alt=""></div>
+            <span class="cap">马克笔表现（三）</span>
+        </div>
+    </div>
+</div>
+
+<!-- 手绘 p3: 3幅彩铅 -->
+<div class="page triple-page">
+    <div class="page-header">
+        <span class="section-tag">手绘作品 · Hand Drawings</span>
+        <span class="page-num">06</span>
+    </div>
+    <div class="trio">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/d491969944dcef4bb3f4f6379e8a1be6.jpg" alt=""></div>
+            <span class="cap">彩铅渲染（一）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/d512178b3ab06ac5143ca7d174084340.jpg" alt=""></div>
+            <span class="cap">彩铅渲染（二）</span>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/手绘/f501d2d7305328a0928e60ece43667b6.jpg" alt=""></div>
+            <span class="cap">彩铅渲染（三）</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ SECTION 2: 竞赛 ═══════════ -->
+<div class="page section-title-page">
+    <div class="inner">
+        <div class="num">02</div>
+        <h2>设计竞赛</h2>
+        <p class="en">Design Competitions</p>
+    </div>
+</div>
+
+<!-- 竞赛 p1: 德阳杯 (full page) -->
+<div class="page project-page">
+    <div class="page-header">
+        <span class="section-tag">竞赛作品 · Competition</span>
+        <span class="page-num">07</span>
+    </div>
+    <h3>德阳杯花境设计竞赛</h3>
+    <p class="desc">花境设计竞赛方案，从植物选型、色彩搭配到空间层次构建，展示花境设计综合能力。</p>
+    <div class="img-area">
+        <img src="images/竞赛/德阳杯花境.jpg" alt="德阳杯花境设计竞赛">
+    </div>
+</div>
+
+<!-- 竞赛 p2: 成都花境 + 花园杯 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">竞赛作品 · Competition</span>
+        <span class="page-num">08</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/竞赛/成都花境.jpg" alt=""></div>
+            <div class="cap">成都花境设计竞赛</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/竞赛/花园杯设计.jpg" alt=""></div>
+            <div class="cap">花园杯景观设计竞赛</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ SECTION 3: 课堂作业 ═══════════ -->
+<div class="page section-title-page">
+    <div class="inner">
+        <div class="num">03</div>
+        <h2>课堂作业</h2>
+        <p class="en">Course Projects</p>
+    </div>
+</div>
+
+<!-- 课堂作业 p1: 中央道路绿地 + 公园大门 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">课堂作业 · Course Projects</span>
+        <span class="page-num">09</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/中央道路绿地.jpg" alt=""></div>
+            <div class="cap">中央道路绿地设计</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/公园大门设计鸟瞰图（小组作业）.jpg" alt=""></div>
+            <div class="cap">公园大门设计鸟瞰图（小组作业）</div>
+        </div>
+    </div>
+</div>
+
+<!-- 课堂作业 p2: 小区种植 + 庭院平面 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">课堂作业 · Course Projects</span>
+        <span class="page-num">10</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/小区植物种植设计.jpg" alt=""></div>
+            <div class="cap">小区植物种植设计</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/庭院平面图.jpg" alt=""></div>
+            <div class="cap">庭院景观平面图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 课堂作业 p3: 庭院效果图 + 文化长廊 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">课堂作业 · Course Projects</span>
+        <span class="page-num">11</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/庭院效果图.jpg" alt=""></div>
+            <div class="cap">庭院景观效果图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/文化长廊效果图.jpg" alt=""></div>
+            <div class="cap">文化长廊景观效果图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 课堂作业 p4: 茶山平面 + 街头小绿地 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">课堂作业 · Course Projects</span>
+        <span class="page-num">12</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/茶山平面图.png" alt=""></div>
+            <div class="cap">茶山景观平面图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/街头小绿地彩平图.png" alt=""></div>
+            <div class="cap">街头小绿地彩色平面图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 课堂作业 p5: 街边绿地 + 校园绿地 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">课堂作业 · Course Projects</span>
+        <span class="page-num">13</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/街边绿地种植设计平面图.jpg" alt=""></div>
+            <div class="cap">街边绿地种植设计平面图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/课堂作业/部分校园绿地彩平图.jpg" alt=""></div>
+            <div class="cap">校园绿地彩色平面图</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ SECTION 4: 毕业设计 ═══════════ -->
+<div class="page section-title-page">
+    <div class="inner">
+        <div class="num">04</div>
+        <h2>毕业设计</h2>
+        <p class="en">Graduation Project</p>
+    </div>
+</div>
+
+<!-- 毕设 p1: 前期分析（一）（二）-->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">14</span>
+    </div>
+    <h3 style="font-size:4mm;font-weight:500;margin-bottom:3mm;">碳中和背景下丰都县滨江绿地的韧性景观设计</h3>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片1.png" alt=""></div>
+            <div class="cap">前期分析（一）— 区位与现状</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片2.png" alt=""></div>
+            <div class="cap">前期分析（二）— 生态与气候</div>
+        </div>
+    </div>
+</div>
+
+<!-- 毕设 p2: 总平面 + 竖向设计 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">15</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片3.png" alt=""></div>
+            <div class="cap">总平面图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片4.png" alt=""></div>
+            <div class="cap">竖向设计图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 毕设 p3: 功能分区 + 交通流线 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">16</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片6.png" alt=""></div>
+            <div class="cap">功能分区图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片7.png" alt=""></div>
+            <div class="cap">交通流线图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 毕设 p4: 景观结构 + 节点详图 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">17</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片9.png" alt=""></div>
+            <div class="cap">景观结构图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/图片13.png" alt=""></div>
+            <div class="cap">节点详图</div>
+        </div>
+    </div>
+</div>
+
+<!-- 毕设 p5: 场地平面 + 植物组团 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">18</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/场地平面图2.jpg" alt=""></div>
+            <div class="cap">场地平面图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/植物组团.jpg" alt=""></div>
+            <div class="cap">植物组团配置</div>
+        </div>
+    </div>
+</div>
+
+<!-- 毕设 p6: 雨水花园 + 鸟瞰图 -->
+<div class="page spread-page">
+    <div class="page-header">
+        <span class="section-tag">毕业设计 · Graduation Project</span>
+        <span class="page-num">19</span>
+    </div>
+    <div class="pair">
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/雨水花园.jpg" alt=""></div>
+            <div class="cap">雨水花园详图</div>
+        </div>
+        <div class="cell">
+            <div class="img-wrap"><img src="images/毕业设计/鸟瞰图.jpg" alt=""></div>
+            <div class="cap">滨江绿地鸟瞰图</div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ END ═══════════ -->
+<div class="page end-page">
+    <h1>感谢观看</h1>
+    <div class="contact-info">
+        <p>代恋雪 · 普洱学院 园林专业 2026届</p>
+        <p>📧 1584824397@qq.com · 📱 1589166476</p>
+        <p>期望职位：景观设计师 / 景观设计师助理</p>
+        <p>期望城市：重庆 · 杭州 / 可全国</p>
+    </div>
+    <p class="motto">「以自然为诗，以空间为画 —— 用心营造每一寸土地的温度。」</p>
+</div>
+
+</body>
+</html>

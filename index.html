@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代恋雪 · 园林设计作品集</title>
+
+    <!-- Open Graph / 社交分享预览 -->
+    <meta property="og:title" content="代恋雪 · 园林设计作品集">
+    <meta property="og:description" content="普洱学院园林专业2026届毕业生 | 景观设计 · 植物配置 · 手绘表现 · 生态韧性设计">
+    <meta property="og:image" content="https://dailianxue.github.io/portfolio/images/avatar.jpg">
+    <meta property="og:url" content="https://dailianxue.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="代恋雪 · 园林设计作品集">
+    <meta property="og:locale" content="zh_CN">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="代恋雪 · 园林设计作品集">
+    <meta name="twitter:description" content="普洱学院园林专业2026届毕业生 | 景观设计 · 植物配置 · 手绘表现 · 生态韧性设计">
+    <meta name="twitter:image" content="https://dailianxue.github.io/portfolio/images/avatar.jpg">
+    <!-- 微信专用 -->
+    <meta itemprop="name" content="代恋雪 · 园林设计作品集">
+    <meta itemprop="description" content="普洱学院园林专业2026届毕业生 | 景观设计 · 植物配置 · 手绘表现 · 生态韧性设计">
+    <meta itemprop="image" content="https://dailianxue.github.io/portfolio/images/avatar.jpg">
+    <style>
+        :root {
+            --sage: #8a9e8a;
+            --sage-light: #c8d8c8;
+            --sage-wash: #e4ede4;
+            --rose: #c4a0a0;
+            --rose-light: #e0cccc;
+            --rose-wash: #f2e8e8;
+            --sky: #8ea8b8;
+            --sky-light: #c4d4de;
+            --sky-wash: #e4eef4;
+            --lavender: #b0a0b8;
+            --lavender-light: #d4ccda;
+            --lavender-wash: #ece6f0;
+            --cream: #faf7f2;
+            --warm-white: #fefcf8;
+            --card-bg: rgba(254,252,248,0.65);
+            --text: #3a3835;
+            --text-light: #6b6864;
+            --text-muted: #969390;
+            --border: rgba(138,158,138,0.18);
+            --shadow: 0 8px 32px rgba(138,158,138,0.12);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
+            background: var(--warm-white);
+            color: var(--text);
+            line-height: 1.8;
+            letter-spacing: 0.025em;
+            overflow-x: hidden;
+        }
+        /* Paper texture overlay */
+        body::before {
+            content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+            background:
+                radial-gradient(ellipse at 15% 8%, rgba(180,160,140,.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 85% 92%, rgba(150,170,160,.05) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 50%, rgba(200,190,170,.03) 0%, transparent 80%);
+            opacity: .8;
+        }
+
+        /* Watercolor blobs */
+        .wc{position:fixed;pointer-events:none;z-index:0;border-radius:50%;filter:blur(130px);opacity:.28;}
+        .wc-1{width:620px;height:620px;background:radial-gradient(circle,var(--sage-light) 0%,transparent 70%);top:-220px;left:-160px;}
+        .wc-2{width:520px;height:520px;background:radial-gradient(circle,var(--rose-light) 0%,transparent 70%);top:38%;right:-200px;}
+        .wc-3{width:480px;height:480px;background:radial-gradient(circle,var(--sky-light) 0%,transparent 70%);bottom:-140px;left:18%;}
+        .wc-4{width:420px;height:420px;background:radial-gradient(circle,var(--lavender-light) 0%,transparent 70%);top:62%;left:-140px;}
+        .wc-5{width:360px;height:360px;background:radial-gradient(circle,var(--sage-light) 0%,transparent 70%);top:18%;right:10%;}
+        .wc-6{width:300px;height:300px;background:radial-gradient(circle,var(--rose-light) 0%,transparent 70%);top:75%;right:25%;opacity:.20;}
+        .wc-7{width:340px;height:340px;background:radial-gradient(circle,var(--sky-light) 0%,transparent 70%);top:22%;left:40%;opacity:.22;}
+
+        .container{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 36px;}
+
+        /* Nav */
+        nav{
+            position:sticky;top:0;z-index:200;
+            backdrop-filter:blur(24px);
+            background:rgba(254,252,248,0.68);
+            border-bottom:1px solid var(--border);
+            padding:14px 0;
+        }
+        nav::after{
+            content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+            background:linear-gradient(90deg,transparent,var(--sage-light),var(--sky-light),var(--rose-light),transparent);
+            opacity:.4;
+        }
+        nav .container{display:flex;justify-content:space-between;align-items:center;}
+        nav .logo{font-size:1.15rem;font-weight:600;color:var(--text);letter-spacing:.06em;}
+        nav .logo i{color:var(--sage);margin-right:6px;font-style:normal;}
+        nav ul{display:flex;list-style:none;gap:26px;}
+        nav ul li a{
+            text-decoration:none;color:var(--text-light);font-size:.88rem;
+            transition:color .25s;padding-bottom:4px;
+        }
+        nav ul li a:hover,nav ul li a.active{color:var(--sage);}
+
+        /* Hero */
+        .hero{padding:110px 0 90px;text-align:center;}
+        .hero .avatar{
+            width:120px;height:120px;border-radius:50%;
+            background:linear-gradient(135deg,var(--sage-light),var(--sky-light),var(--lavender-light));
+            margin:0 auto 28px;
+            display:flex;align-items:center;justify-content:center;
+            font-size:2.8rem;color:white;
+            box-shadow:0 8px 44px rgba(138,158,138,.30);
+            position:relative;
+        }
+        .hero .avatar::after{
+            content:'';position:absolute;inset:-7px;border-radius:50%;
+            border:2px dashed rgba(138,158,138,.35);
+            animation:rotate-slow 22s linear infinite;
+        }
+        @keyframes rotate-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        .hero h1{font-size:2.6rem;font-weight:300;letter-spacing:.07em;margin-bottom:10px;}
+        .hero h1 strong{font-weight:650;}
+        .hero .subtitle{font-size:1.02rem;color:var(--text-muted);font-weight:300;margin-bottom:18px;}
+        .hero .tags{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;}
+        .hero .tag{
+            padding:6px 20px;border-radius:100px;font-size:.82rem;
+            color:var(--text-light);
+            background:rgba(138,158,138,.12);
+            border:1px solid var(--border);
+            letter-spacing:.03em;
+        }
+
+        /* Section */
+        section{padding:90px 0;}
+        .section-label{text-align:center;margin-bottom:52px;}
+        .section-label .en{
+            font-size:.74rem;text-transform:uppercase;letter-spacing:.22em;
+            color:var(--sage);margin-bottom:4px;
+        }
+        .section-label h2{font-size:1.85rem;font-weight:400;letter-spacing:.06em;}
+        .divider{
+            width:64px;height:3px;
+            background:linear-gradient(90deg,var(--sage-light),var(--sage),var(--sky),var(--lavender-light));
+            margin:14px auto 0;border-radius:3px;opacity:.7;
+        }
+
+        /* About */
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+        .about-text p{margin-bottom:18px;text-indent:2em;color:var(--text-light);font-size:.94rem;}
+        .about-text .hl{color:var(--sage);font-weight:500;}
+        .info-card{
+            list-style:none;background:var(--card-bg);border-radius:16px;
+            padding:28px 30px 20px;border:1px solid var(--border);
+            position:relative;overflow:hidden;
+        }
+        .info-card::after{
+            content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;
+            border-radius:50%;background:radial-gradient(circle,var(--sage-wash) 0%,transparent 70%);
+            opacity:.5;pointer-events:none;z-index:0;
+        }
+        .info-card li{display:flex;align-items:baseline;gap:12px;margin-bottom:15px;font-size:.92rem;}
+        .info-card li .lbl{color:var(--text-muted);white-space:nowrap;font-size:.80rem;min-width:64px;}
+        .info-card li .val{color:var(--text);}
+
+        /* Education & Experience timeline */
+        .timeline{position:relative;padding-left:28px;}
+        .timeline::before{
+            content:'';position:absolute;left:8px;top:4px;bottom:4px;
+            width:2px;border-radius:1px;
+            background:linear-gradient(180deg,var(--sage-light),var(--sky-light),var(--lavender-light),var(--rose-light));
+            opacity:.55;
+        }
+        .timeline-item{margin-bottom:28px;position:relative;}
+        .timeline-item::before{
+            content:'';position:absolute;left:-23px;top:6px;
+            width:12px;height:12px;border-radius:50%;
+            background:var(--sage-light);border:2px solid var(--sage);
+            box-shadow:0 0 10px rgba(138,158,138,.28);
+        }
+        .timeline-item .period{font-size:.78rem;color:var(--sage);margin-bottom:2px;letter-spacing:.03em;}
+        .timeline-item h4{font-size:.98rem;font-weight:550;margin-bottom:4px;}
+        .timeline-item p{font-size:.88rem;color:var(--text-muted);}
+
+        /* Skills */
+        .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+        .skill-card{
+            text-align:center;padding:38px 22px;border-radius:16px;
+            background:var(--card-bg);border:1px solid var(--border);
+            transition:transform .3s,box-shadow .3s;
+            position:relative;overflow:hidden;
+        }
+        .skill-card::before{
+            content:'';position:absolute;top:0;left:0;right:0;height:3px;
+            background:linear-gradient(90deg,var(--sage-light),var(--sky-light),var(--lavender-light));
+            opacity:.6;
+        }
+        .skill-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+        .skill-card .icon{font-size:2.5rem;margin-bottom:12px;}
+        .skill-card h4{font-weight:500;margin-bottom:8px;font-size:1rem;}
+        .skill-card p{font-size:.83rem;color:var(--text-muted);line-height:1.65;}
+
+        /* ── Portfolio Gallery ── */
+        .gallery-filters{
+            display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:40px;
+        }
+        .gallery-filters button{
+            padding:8px 22px;border-radius:100px;font-size:.84rem;
+            border:1px solid var(--border);background:var(--card-bg);
+            color:var(--text-light);cursor:pointer;
+            transition:all .25s;letter-spacing:.03em;font-family:inherit;
+        }
+        .gallery-filters button:hover{background:var(--sage-wash);border-color:var(--sage-light);}
+        .gallery-filters button.active{
+            background:var(--sage);color:white;border-color:var(--sage);
+        }
+        .gallery-filters button .count{
+            font-size:.72rem;opacity:.65;margin-left:2px;
+        }
+
+        .gallery-grid{
+            display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+        }
+        .gallery-item{
+            border-radius:14px;overflow:hidden;cursor:pointer;
+            background:var(--card-bg);border:1px solid var(--border);
+            transition:transform .3s,box-shadow .3s;
+            position:relative;
+        }
+        .gallery-item::before{
+            content:'';position:absolute;top:0;left:0;right:0;height:3px;
+            background:linear-gradient(90deg,var(--sage-light),var(--sky-light),var(--rose-light));
+            opacity:.5;z-index:2;
+        }
+        .gallery-item:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+        .gallery-item .thumb{
+            width:100%;height:200px;object-fit:cover;display:block;
+            background:var(--sage-wash);
+        }
+        .gallery-item .meta{
+            padding:14px 16px 16px;
+        }
+        .gallery-item .meta .cat{
+            font-size:.72rem;color:var(--sage);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px;
+        }
+        .gallery-item .meta h4{
+            font-size:.92rem;font-weight:500;line-height:1.4;
+            display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+        }
+        .gallery-empty{
+            grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-muted);
+        }
+
+        /* Lightbox */
+        .lightbox{
+            display:none;position:fixed;inset:0;z-index:9999;
+            background:rgba(30,28,26,.92);
+            backdrop-filter:blur(12px);
+            align-items:center;justify-content:center;flex-direction:column;
+        }
+        .lightbox.open{display:flex;}
+        .lightbox img{
+            max-width:92vw;max-height:78vh;object-fit:contain;
+            border-radius:8px;box-shadow:0 16px 64px rgba(0,0,0,.35);
+        }
+        .lightbox .lb-title{
+            color:rgba(255,255,255,.85);font-size:.95rem;margin-top:16px;
+            letter-spacing:.04em;
+        }
+        .lightbox .lb-close{
+            position:absolute;top:24px;right:32px;
+            width:44px;height:44px;border-radius:50%;
+            background:rgba(255,255,255,.12);color:white;border:none;
+            font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+            transition:background .25s;
+        }
+        .lightbox .lb-close:hover{background:rgba(255,255,255,.22);}
+        .lightbox .lb-nav{
+            position:absolute;top:50%;transform:translateY(-50%);
+            width:48px;height:48px;border-radius:50%;
+            background:rgba(255,255,255,.10);color:white;border:none;
+            font-size:1.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+            transition:background .25s;
+        }
+        .lightbox .lb-nav:hover{background:rgba(255,255,255,.22);}
+        .lightbox .lb-prev{left:28px;}
+        .lightbox .lb-next{right:28px;}
+        .lightbox .lb-counter{
+            position:absolute;bottom:32px;color:rgba(255,255,255,.55);
+            font-size:.82rem;letter-spacing:.06em;
+        }
+
+        /* Contact */
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+        .contact-text p{margin-bottom:14px;color:var(--text-light);font-size:.94rem;}
+        .contact-text .email-link{
+            display:inline-block;color:var(--sage);text-decoration:none;
+            border-bottom:1px dashed var(--sage);padding-bottom:2px;transition:opacity .25s;
+        }
+        .contact-text .email-link:hover{opacity:.65;}
+        .qr-wrap{text-align:center;}
+        .qr-card{
+            display:inline-block;background:white;border-radius:20px;
+            padding:24px;box-shadow:0 8px 40px rgba(138,158,138,.18);
+            border:1px solid var(--border);
+        }
+        .qr-card img{width:180px;height:180px;display:block;border-radius:8px;}
+        .qr-card .caption{margin-top:12px;font-size:.82rem;color:var(--text-muted);}
+        .qr-card .caption strong{display:block;color:var(--text);font-weight:500;font-size:.9rem;margin-bottom:2px;}
+
+        /* Footer */
+        footer{
+            text-align:center;padding:50px 0 36px;font-size:.8rem;
+            color:var(--text-muted);border-top:1px solid var(--border);
+        }
+        footer .motto{margin-top:8px;color:var(--sage);font-style:italic;}
+
+        /* Responsive */
+        @media(max-width:768px){
+            .hero h1{font-size:2rem;}
+            .about-grid,.contact-grid{grid-template-columns:1fr;gap:36px;}
+            .skills-grid{grid-template-columns:1fr 1fr;}
+            .gallery-grid{grid-template-columns:1fr 1fr;}
+            nav ul{gap:14px;}
+            nav ul li a{font-size:.8rem;}
+            .lightbox .lb-prev{left:12px;}.lightbox .lb-next{right:12px;}
+            .lightbox .lb-close{top:12px;right:14px;}
+        }
+        @media(max-width:480px){
+            .skills-grid,.gallery-grid{grid-template-columns:1fr;}
+            .hero{padding:70px 0 50px;}
+            section{padding:50px 0;}
+            .container{padding:0 20px;}
+            nav .container{flex-direction:column;gap:8px;}
+        }
+    </style>
+</head>
+<body>
+
+<!-- Watercolor background -->
+<div class="wc wc-1"></div>
+<div class="wc wc-2"></div>
+<div class="wc wc-3"></div>
+<div class="wc wc-4"></div>
+<div class="wc wc-5"></div>
+<div class="wc wc-6"></div>
+<div class="wc wc-7"></div>
+
+<!-- Nav -->
+<nav>
+    <div class="container">
+        <div class="logo"><i>❀</i>Portfolio</div>
+        <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#experience">经历</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#portfolio">作品集</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="avatar"><img src="images/avatar.jpg" alt="代恋雪" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
+        <h1>你好，我是<strong>代恋雪</strong></h1>
+        <p class="subtitle">园林专业 · 普洱学院 · 2026届毕业生</p>
+        <div class="tags">
+            <span class="tag">景观设计</span>
+            <span class="tag">植物配置</span>
+            <span class="tag">手绘表现</span>
+            <span class="tag">生态韧性</span>
+            <span class="tag">数字化设计</span>
+            <span class="tag">实习经验×2</span>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <div class="section-label">
+            <p class="en">About Me</p>
+            <h2>自我介绍</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    我是<span class="hl">普洱学院园林专业</span>2026届毕业生代恋雪。四年的专业学习让我从对园林设计的美好憧憬，成长为具备扎实专业基础的准园林人。在校期间系统学习了园林规划设计、园林植物学、园林工程、景观生态学、计算机辅助设计等核心课程，打下坚实的理论与实践基础。
+                </p>
+                <p>
+                    我相信园林设计是<span class="hl">人与自然对话的艺术</span>——一草一木的搭配、一石一水的布局，都能在无声中传递空间的情绪与温度。我热爱手绘表达的即兴与灵动，也享受数字化设计带来的精确与高效，善于将<span class="hl">手绘创意与计算机辅助设计</span>相结合，让设计方案既有温度又具可实施性。
+                </p>
+                <p>
+                    在专业实践方面，我拥有<span class="hl">两段互补的实习经历</span>：在九木堂装饰公司担任设计助理期间，专注庭院与阳台花园等户外景观空间设计，锻炼了从概念方案到施工落地的全流程能力；在住建委实习期间，参与古树名木保护整治、街边绿地与道路绿地园林设计等市政项目，积累了公共景观项目的实务经验。两段经历让我兼具<span class="hl">私家庭院精细化设计</span>与<span class="hl">公共绿地系统性规划</span>的双重能力。
+                </p>
+                <p>
+                    我的毕业设计<span class="hl">《碳中和背景下丰都县滨江绿地的韧性景观设计》</span>聚焦生态与韧性主题，将碳中和理念融入滨江绿地景观方案，获得导师高度认可。我性格开朗、踏实勤奋，善于团队沟通协作，也具备独立承担设计任务的能力。我期待加入一个有专业追求的设计团队，用设计为城乡空间注入更多自然之美与人文温度。
+                </p>
+            </div>
+            <ul class="info-card">
+                <li><span class="lbl">姓名</span><span class="val">代恋雪</span></li>
+                <li><span class="lbl">学校</span><span class="val">普洱学院</span></li>
+                <li><span class="lbl">专业</span><span class="val">园林</span></li>
+                <li><span class="lbl">学历</span><span class="val">本科</span></li>
+                <li><span class="lbl">毕业时间</span><span class="val">2026年6月</span></li>
+                <li><span class="lbl">所在地</span><span class="val">重庆</span></li>
+                <li><span class="lbl">求职意向</span><span class="val">景观设计师 / 景观设计师助理</span></li>
+                <li><span class="lbl">期望城市</span><span class="val">重庆 · 杭州 / 可全国</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section id="experience">
+        <div class="section-label">
+            <p class="en">Experience & Education</p>
+            <h2>学习与实习经历</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="timeline" style="max-width:640px;margin:0 auto;">
+                <div class="timeline-item">
+                    <p class="period">2022.09 — 2026.06</p>
+                    <h4>普洱学院 · 园林专业</h4>
+                    <p>主修课程：园林规划设计、园林植物学、园林工程、景观生态学、CAD制图、SketchUp建模、园林美术等。在校期间参与校园绿地微更新、社区花园营造等实践项目。</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="period">2024.07 — 2024.09</p>
+                    <h4>九木堂装饰公司 · 设计助理（实习）</h4>
+                    <p>参与住宅庭院与阳台花园等户外景观空间的设计，负责方案草图绘制、植物选型与配置、SU模型搭建及CAD施工图绘制。在室内外空间衔接与过渡设计方面积累了实践经验，深化了对空间尺度、材料质感与自然元素融合的理解，有效提升了从概念方案到施工落地的全流程设计能力。</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="period">2025.07 — 2025.11</p>
+                    <h4>住建委 · 实习</h4>
+                    <p>参与古树名木保护整治方案编制、街边绿地园林设计、道路绿地景观设计等市政项目。负责植物清单编制、平面图绘制及部分方案文本撰写。</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="period">2025.09 — 2026.05</p>
+                    <h4>毕业设计</h4>
+                    <p>《碳中和背景下丰都县滨江绿地的韧性景观设计》——聚焦滨江绿地的生态韧性与碳中和策略，完成从前期分析到方案设计的全过程。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="section-label">
+            <p class="en">Skills</p>
+            <h2>专业技能</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="icon">🌿</div>
+                <h4>植物配置设计</h4>
+                <p>熟悉西南地区常见园林植物，擅长乔灌草多层次搭配与季相变化设计</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">✏️</div>
+                <h4>手绘表现</h4>
+                <p>具备扎实的手绘功底，能快速通过速写与马克笔表达设计构思与空间氛围</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">💻</div>
+                <h4>数字化设计</h4>
+                <p>熟练运用 AutoCAD、SketchUp、Lumion、Photoshop、Illustrator 等设计工具</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">🏞️</div>
+                <h4>空间营造</h4>
+                <p>理解空间尺度与游憩行为的关系，注重游览体验的节奏感与叙事性</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">🌏</div>
+                <h4>生态韧性设计</h4>
+                <p>关注海绵城市、碳中和、韧性景观等理念，将生态思维融入设计全过程</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">📐</div>
+                <h4>施工图与工程</h4>
+                <p>具备园林施工图绘制基础，了解常用园林材料及施工工艺</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="section-label">
+            <p class="en">Portfolio</p>
+            <h2>作品集</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters">
+            <button class="active" data-filter="all">全部<span class="count">34</span></button>
+            <button data-filter="手绘">手绘<span class="count">9</span></button>
+            <button data-filter="竞赛">机绘·竞赛<span class="count">3</span></button>
+            <button data-filter="课堂作业">机绘·课堂作业<span class="count">10</span></button>
+            <button data-filter="毕业设计">机绘·毕业设计<span class="count">12</span></button>
+        </div>
+
+        <!-- Gallery grid -->
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-label">
+            <p class="en">Contact</p>
+            <h2>联系方式</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-text">
+                <p>
+                    感谢你花时间了解我和我的作品。如果你对我的设计能力感兴趣，或有合适的职位机会，欢迎随时与我联系。我非常乐意分享更多作品细节与设计思考。
+                </p>
+                <p>📧 邮箱：<a class="email-link" href="mailto:1584824397@qq.com">1584824397@qq.com</a></p>
+                <p>📱 电话：1589166476</p>
+                <p style="margin-top:20px;font-size:.82rem;color:var(--text-muted);">
+                    ⚡ 扫描右侧二维码可直接添加我的微信，期待与你交流！
+                </p>
+            </div>
+            <div class="qr-wrap">
+                <div class="qr-card">
+                    <img src="images/wechat-qr.jpg"
+                         alt="微信二维码"
+                         loading="lazy">
+                    <div class="caption">
+                        <strong>微信扫码联系</strong>
+                        添加请备注"园林设计求职"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 代恋雪 · 普洱学院 园林专业 · 个人作品集</p>
+    <p class="motto">「以自然为诗，以空间为画 —— 用心营造每一寸土地的温度。」</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" title="关闭">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" title="上一张">←</button>
+    <button class="lb-nav lb-next" id="lbNext" title="下一张">→</button>
+    <img src="" alt="" id="lbImg">
+    <p class="lb-title" id="lbTitle"></p>
+    <p class="lb-counter" id="lbCounter"></p>
+</div>
+
+<script>
+(function(){
+
+/* ===== Portfolio Data ===== */
+const works = [
+    // ── 手绘 (9) ── */
+    {cat:'手绘',title:'手绘作品 — 景观速写（一）',src:'images/shouhui/1cd5b3b5674e95f6a8a207f987e684cc.jpg'},
+    {cat:'手绘',title:'手绘作品 — 景观速写（二）',src:'images/shouhui/3b78b327397f19813faf8c146bb51d83.jpg'},
+    {cat:'手绘',title:'手绘作品 — 景观速写（三）',src:'images/shouhui/6e983dbbdca094cd393f454f4344345b.jpg'},
+    {cat:'手绘',title:'手绘作品 — 马克笔表现（一）',src:'images/shouhui/ab9f61dc0e9b7ec08291746d6828788e.jpg'},
+    {cat:'手绘',title:'手绘作品 — 马克笔表现（二）',src:'images/shouhui/c79807b8e7849dfdbcbf0eb38e942416.jpg'},
+    {cat:'手绘',title:'手绘作品 — 马克笔表现（三）',src:'images/shouhui/c8fa274bd150ae7e2bafb4c7be8f823e.jpg'},
+    {cat:'手绘',title:'手绘作品 — 彩铅渲染（一）',src:'images/shouhui/d491969944dcef4bb3f4f6379e8a1be6.jpg'},
+    {cat:'手绘',title:'手绘作品 — 彩铅渲染（二）',src:'images/shouhui/d512178b3ab06ac5143ca7d174084340.jpg'},
+    {cat:'手绘',title:'手绘作品 — 彩铅渲染（三）',src:'images/shouhui/f501d2d7305328a0928e60ece43667b6.jpg'},
+
+    // ── 竞赛 (3) ── */
+    {cat:'竞赛',title:'德阳杯花境设计竞赛',src:'images/jingsai/deyangbei.jpg'},
+    {cat:'竞赛',title:'成都花境设计竞赛',src:'images/jingsai/chengdu.jpg'},
+    {cat:'竞赛',title:'花园杯景观设计竞赛',src:'images/jingsai/huayuanbei.jpg'},
+
+    // ── 课堂作业 (10) ── */
+    {cat:'课堂作业',title:'中央道路绿地设计',src:'images/ketangzuoye/zhongyang-daolu.jpg'},
+    {cat:'课堂作业',title:'公园大门设计鸟瞰图（小组作业）',src:'images/ketangzuoye/gongyuan-damen.jpg'},
+    {cat:'课堂作业',title:'小区植物种植设计',src:'images/ketangzuoye/xiaoqu-zhiwu.jpg'},
+    {cat:'课堂作业',title:'庭院景观平面图',src:'images/ketangzuoye/tingyuan-pingmian.jpg'},
+    {cat:'课堂作业',title:'庭院景观效果图',src:'images/ketangzuoye/tingyuan-xiaoguo.jpg'},
+    {cat:'课堂作业',title:'文化长廊景观效果图',src:'images/ketangzuoye/wenhua-changlang.jpg'},
+    {cat:'课堂作业',title:'茶山景观平面图',src:'images/ketangzuoye/chashan-pingmian.png'},
+    {cat:'课堂作业',title:'街头小绿地彩色平面图',src:'images/ketangzuoye/jietou-lvdi.png'},
+    {cat:'课堂作业',title:'街边绿地种植设计平面图',src:'images/ketangzuoye/jiebian-lvdi.jpg'},
+    {cat:'课堂作业',title:'校园绿地彩色平面图',src:'images/ketangzuoye/xiaoyuan-lvdi.jpg'},
+
+    // ── 毕业设计 (12) ── */
+    {cat:'毕业设计',title:'毕业设计 — 前期分析（一）',src:'images/biyesheji/pic1.png'},
+    {cat:'毕业设计',title:'毕业设计 — 前期分析（二）',src:'images/biyesheji/pic2.png'},
+    {cat:'毕业设计',title:'毕业设计 — 总平面图',src:'images/biyesheji/pic3.png'},
+    {cat:'毕业设计',title:'毕业设计 — 竖向设计图',src:'images/biyesheji/pic4.png'},
+    {cat:'毕业设计',title:'毕业设计 — 功能分区图',src:'images/biyesheji/pic6.png'},
+    {cat:'毕业设计',title:'毕业设计 — 交通流线图',src:'images/biyesheji/pic7.png'},
+    {cat:'毕业设计',title:'毕业设计 — 景观结构图',src:'images/biyesheji/pic9.png'},
+    {cat:'毕业设计',title:'毕业设计 — 节点详图',src:'images/biyesheji/pic13.png'},
+    {cat:'毕业设计',title:'毕业设计 — 场地平面图',src:'images/biyesheji/changdi-pingmian-2.jpg'},
+    {cat:'毕业设计',title:'毕业设计 — 植物组团配置',src:'images/biyesheji/zhiwu-zutuan.jpg'},
+    {cat:'毕业设计',title:'毕业设计 — 雨水花园详图',src:'images/biyesheji/yushui-huayuan.jpg'},
+    {cat:'毕业设计',title:'毕业设计 — 滨江绿地鸟瞰图',src:'images/biyesheji/niaokan.jpg'}
+];
+
+const galleryGrid = document.getElementById('galleryGrid');
+const filterBtns = document.querySelectorAll('.gallery-filters button');
+
+/* Build gallery */
+function renderGallery(items){
+    if(!items.length){
+        galleryGrid.innerHTML = '<div class="gallery-empty">该分类暂无作品，请选择其他分类查看。</div>';
+        return;
+    }
+    galleryGrid.innerHTML = items.map((w,i)=>{
+        const catCN = {手绘:'手绘',竞赛:'机绘 · 竞赛',课堂作业:'机绘 · 课堂作业',毕业设计:'机绘 · 毕业设计'};
+        return `
+        <div class="gallery-item" data-index="${i}" data-cat="${w.cat}">
+            <img class="thumb" src="${w.src}" alt="${w.title}" loading="lazy" onerror="this.style.background='var(--sage-wash)';this.style.minHeight='200px';">
+            <div class="meta">
+                <p class="cat">${catCN[w.cat]||w.cat}</p>
+                <h4>${w.title}</h4>
+            </div>
+        </div>`;
+    }).join('');
+    bindGalleryClicks(items);
+}
+
+/* Current filtered set */
+let currentSet = [...works];
+
+/* Filter */
+filterBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        filterBtns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        currentSet = f==='all' ? [...works] : works.filter(w=>w.cat===f);
+        renderGallery(currentSet);
+    });
+});
+
+/* Lightbox */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbTitle = document.getElementById('lbTitle');
+const lbCounter = document.getElementById('lbCounter');
+let lbIndex = -1;
+
+function openLightbox(idx){
+    lbIndex = idx;
+    const w = currentSet[idx];
+    lbImg.src = w.src;
+    lbImg.alt = w.title;
+    lbTitle.textContent = w.title;
+    lbCounter.textContent = `${idx+1} / ${currentSet.length}`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbIndex = -1;
+}
+
+function navLightbox(dir){
+    if(currentSet.length===0)return;
+    lbIndex = (lbIndex + dir + currentSet.length) % currentSet.length;
+    const w = currentSet[lbIndex];
+    lbImg.src = w.src;
+    lbImg.alt = w.title;
+    lbTitle.textContent = w.title;
+    lbCounter.textContent = `${lbIndex+1} / ${currentSet.length}`;
+}
+
+document.getElementById('lbClose').addEventListener('click',closeLightbox);
+document.getElementById('lbPrev').addEventListener('click',()=>navLightbox(-1));
+document.getElementById('lbNext').addEventListener('click',()=>navLightbox(1));
+
+lb.addEventListener('click',function(e){
+    if(e.target===lb) closeLightbox();
+});
+
+document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape') closeLightbox();
+    if(e.key==='ArrowLeft') navLightbox(-1);
+    if(e.key==='ArrowRight') navLightbox(1);
+});
+
+function bindGalleryClicks(items){
+    galleryGrid.querySelectorAll('.gallery-item').forEach(el=>{
+        el.addEventListener('click',()=>{
+            const idx = parseInt(el.dataset.index);
+            if(!isNaN(idx)) openLightbox(idx);
+        });
+    });
+}
+
+/* Init */
+renderGallery(currentSet);
+
+/* Smooth scroll offset for sticky nav */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+            const navH = document.querySelector('nav').offsetHeight;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+            window.scrollTo({top,behavior:'smooth'});
+        }
+    });
+});
+
+/* Active nav link on scroll */
+const sections = document.querySelectorAll('section, header');
+const navLinks = document.querySelectorAll('nav ul li a');
+window.addEventListener('scroll',()=>{
+    let current = '';
+    sections.forEach(sec=>{
+        const top = sec.offsetTop - 160;
+        if(window.pageYOffset >= top) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(a=>{
+        a.classList.remove('active');
+        if(a.getAttribute('href')==='#'+current) a.classList.add('active');
+    });
+});
+
+})();
+</script>
+
+</body>
+</html>
