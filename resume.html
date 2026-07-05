@@ -3,109 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>代恋雪 · 个人简历</title>
+<title>代恋雪 · 个人简历 · 杭州</title>
 <style>
 :root {
     --text: #1a1a1a;
-    --text-mid: #444;
+    --text-mid: #3a3a3a;
     --text-light: #666;
     --accent: #2b6b3e;
-    --accent-light: #e8f2ea;
-    --line: #d8d8d8;
+    --accent-light: #edf5ef;
+    --line: #ddd;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
     font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
     color: var(--text);
-    background: #ececec;
-    line-height: 1.65;
-    font-size: 13.5px;
+    background: #f0f0f0;
+    line-height: 1.6;
+    font-size: 13px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 .page {
-    max-width: 800px;
-    margin: 24px auto;
+    max-width: 780px;
+    margin: 20px auto;
     background: #fff;
-    padding: 50px 58px;
-    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+    padding: 44px 52px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05);
 }
 
-.header { text-align: center; margin-bottom: 28px; }
-.header h1 { font-size: 30px; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 10px; }
-.header .contact-bar {
-    display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;
-    font-size: 12px; color: var(--text-light);
-}
-.header .contact-bar span { white-space: nowrap; }
-.header .contact-bar a { color: var(--accent); text-decoration: none; font-weight: 500; }
-.header .contact-bar a:hover { text-decoration: underline; }
+/* Header */
+.header { text-align: center; margin-bottom: 24px; }
+.header h1 { font-size: 28px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 8px; }
+.header .meta { font-size: 12px; color: var(--text-light); display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+.header .meta span { white-space: nowrap; }
+.header .meta a { color: var(--accent); text-decoration: none; font-weight: 500; }
 
-/* ===== Section ===== */
-.section { margin-bottom: 22px; }
+/* Section */
+.section { margin-bottom: 18px; }
 .section-title {
-    font-size: 15px; font-weight: 700; letter-spacing: 0.05em;
+    font-size: 14px; font-weight: 700;
     color: var(--accent);
-    background: var(--accent-light);
-    padding: 6px 14px; margin-bottom: 12px;
+    padding: 5px 0 5px 12px; margin-bottom: 10px;
     border-left: 4px solid var(--accent);
-    display: flex; align-items: center; gap: 6px;
+    background: var(--accent-light);
 }
 
-/* ===== 求职意向 ===== */
-.intent-row { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 13px; }
-.intent-row .intent-item strong { color: var(--accent); margin-right: 4px; }
+/* 求职意向条 */
+.intent-bar { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 12.5px; margin-bottom: 4px; }
+.intent-bar span strong { color: var(--accent); }
 
-/* ===== 个人概述 ===== */
-.summary-box {
-    font-size: 13.5px; color: var(--text-mid); line-height: 1.85;
-    background: #fafcfa; border-radius: 6px; padding: 14px 18px;
-    border: 1px solid #e0e8e2;
-}
-
-/* ===== 时间线条目 ===== */
-.item { margin-bottom: 15px; }
-.item-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 2px; }
-.item-header h3 { font-size: 14px; font-weight: 700; }
-.item-header .date { font-size: 12px; color: var(--text-light); white-space: nowrap; }
-.item-sub { font-size: 12px; color: var(--accent); margin-bottom: 5px; font-weight: 600; }
-.item ul { padding-left: 18px; }
-.item ul li { font-size: 12.5px; color: var(--text-mid); margin-bottom: 3px; line-height: 1.6; }
+/* Item */
+.item { margin-bottom: 13px; }
+.item-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.item-head h3 { font-size: 13.5px; font-weight: 700; }
+.item-head .date { font-size: 11.5px; color: var(--text-light); white-space: nowrap; }
+.item-sub { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+.item ul { padding-left: 17px; }
+.item ul li { font-size: 12px; color: var(--text-mid); margin-bottom: 2px; line-height: 1.55; }
 .item ul li::marker { color: var(--accent); }
-.item ul li strong { color: var(--text); }
+.item p { font-size: 12px; color: var(--text-mid); line-height: 1.55; }
 
-/* ===== 项目网格 ===== */
-.project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.project-card {
-    border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px;
+/* Grids */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+
+/* 项目卡片 */
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.proj-card {
+    border: 1px solid var(--line); border-radius: 5px; padding: 11px 13px;
     border-top: 3px solid var(--accent);
 }
-.project-card h4 { font-size: 13px; margin-bottom: 3px; }
-.project-card .tag { display: inline-block; font-size: 10px; background: var(--accent-light); color: var(--accent); padding: 1px 8px; border-radius: 10px; margin-bottom: 4px; }
-.project-card p { font-size: 11.5px; color: var(--text-light); line-height: 1.55; }
+.proj-card .tag { font-size: 10px; background: var(--accent-light); color: var(--accent); padding: 1px 7px; border-radius: 8px; display: inline-block; margin-bottom: 3px; }
+.proj-card h4 { font-size: 12.5px; margin-bottom: 2px; }
+.proj-card p { font-size: 11px; color: var(--text-light); line-height: 1.5; }
 
-/* ===== 技能网格 ===== */
-.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
-.sk { font-size: 12.5px; }
-.sk strong { color: var(--accent); }
+/* 页脚 */
+.footer { text-align: center; margin-top: 18px; font-size: 10.5px; color: #bbb; border-top: 1px solid #eee; padding-top: 14px; }
+.footer a { color: var(--accent); }
 
-/* ===== 页脚 ===== */
-.footer { text-align: center; margin-top: 24px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; padding-top: 16px; }
-.footer a { color: var(--accent); text-decoration: none; }
-
-/* ===== 打印 ===== */
 @media print {
     body { background: #fff; }
-    .page { box-shadow: none; margin: 0; padding: 30px 40px; max-width: 100%; }
-    .section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .summary-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .project-card .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { box-shadow: none; margin: 0; padding: 28px 36px; max-width: 100%; }
+    .section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #edf5ef !important; }
     a { color: #333 !important; }
 }
-
 @media (max-width: 600px) {
-    .page { padding: 20px 16px; margin: 6px; }
-    .project-grid, .skills-grid { grid-template-columns: 1fr; }
+    .page { padding: 16px 12px; margin: 4px; }
+    .two-col, .proj-grid { grid-template-columns: 1fr; }
     .header h1 { font-size: 22px; }
 }
 </style>
@@ -117,90 +100,93 @@ body {
 <!-- ========== 头部 ========== -->
 <div class="header">
     <h1>代恋雪</h1>
-    <div class="contact-bar">
+    <div class="meta">
         <span>📧 1584824397@qq.com</span>
         <span>📱 158-9166-4767</span>
-        <span>🎓 普洱学院 · 园林专业 · 本科 · 2026届</span>
-        <span>🌐 <a href="https://dddllx.github.io/portfolio/" target="_blank">作品集 → dddllx.github.io/portfolio</a></span>
+        <span>📍 重庆 · 可立即到岗杭州</span>
+        <span>🎓 普洱学院 · 园林 · 本科 · 2026届</span>
+        <span>🌐 <a href="https://dddllx.github.io/portfolio/" target="_blank">作品集：dddllx.github.io/portfolio</a></span>
     </div>
 </div>
 
 <!-- ========== 求职意向 ========== -->
 <div class="section">
     <div class="section-title">求职意向</div>
-    <div class="intent-row">
-        <span class="intent-item"><strong>目标岗位</strong>景观设计师 / 设计师助理</span>
-        <span class="intent-item"><strong>期望城市</strong>杭州</span>
-        <span class="intent-item"><strong>到岗时间</strong>2026年7月，可立即到岗</span>
-        <span class="intent-item"><strong>期望薪资</strong>面议</span>
+    <div class="intent-bar">
+        <span><strong>目标岗位</strong>景观设计师 / 设计师助理</span>
+        <span><strong>期望城市</strong>杭州</span>
+        <span><strong>期望薪资</strong>5000-6000元/月</span>
+        <span><strong>到岗时间</strong>随时</span>
     </div>
 </div>
 
-<!-- ========== 核心竞争力 ========== -->
-<div class="section">
-    <div class="section-title">核心竞争力</div>
-    <div class="summary-box">
-        <strong>私家庭院 + 市政景观双轨经验</strong>：分别在设计公司与政府住建部门实习，既懂装饰公司设计流程与客户沟通，又具备公共项目系统思维，能快速适应不同类型的景观设计工作。<br>
-        <strong>全流程落地能力</strong>：从概念草图、SU模型、CAD施工图到现场施工跟进均有实操，画过12张以上施工图、建过8个以上空间模型，图纸直接用于施工。<br>
-        <strong>设计理念紧跟前沿</strong>：毕业设计聚焦碳中和与韧性景观，将海绵城市理念融入滨江绿地方案，获导师高度评价。
-    </div>
-</div>
-
-<!-- ========== 实习经历（九木堂放前面——跟杭州装饰公司最对口） ========== -->
+<!-- ========== 实习经历 ========== -->
 <div class="section">
     <div class="section-title">实习经历</div>
 
     <div class="item">
-        <div class="item-header">
-            <h3>九木堂装饰公司 · 设计助理</h3>
-            <span class="date">2024.07 — 2024.09（3个月）</span>
+        <div class="item-head">
+            <h3>广东九木堂装饰 · 设计师助理</h3>
+            <span class="date">2025.10 — 2026.01（4个月）</span>
         </div>
-        <div class="item-sub">▸ 私家庭院 · 阳台花园 · 室内外空间衔接</div>
+        <div class="item-sub">私家庭院全案设计 · SU建模渲染 · CAD施工图 · 现场施工跟进</div>
         <ul>
-            <li>独立完成<strong>4个</strong>私家庭院与<strong>2个</strong>阳台花园方案设计，从客户需求沟通、风格定位、概念草图到植物选型全程负责，风格涵盖新中式、现代简约和自然田园</li>
-            <li>搭建<strong>8个以上</strong>SketchUp庭院空间模型用于客户方案展示，绘制<strong>12张以上</strong>CAD施工图纸（平面布置、竖向设计、水电定位、植物种植、节点详图）</li>
-            <li><strong>1个项目施工全程跟进</strong>——从放线、硬装到植物定植，真正验证了设计可行性，深刻理解"图纸能画出来 ≠ 现场能做出来"</li>
-            <li>深入研究室内外衔接——庭院与客厅过渡、阳台与卧室关系、材料从室内延伸到室外的收口处理，积累了这方面的实践经验</li>
+            <li>独立负责<strong>3个别墅庭院</strong>全案设计（新中式、现代简约风格），总面积约720㎡，从场地分析、平面布局、植物季相搭配到效果图输出全程独立完成，<strong>其中2个已施工落地</strong></li>
+            <li>CAD绘制硬质铺装、水景、种植、水电节点等<strong>施工图20余张</strong>，严格按园建和绿化出图规范；SketchUp搭建庭院场地模型，PS制作鸟瞰及节点效果图12张用于客户汇报</li>
+            <li>整理含90余种常用苗木的素材库（习性、规格、产地、参考价），后续方案植物选型效率明显提升</li>
+            <li>分层配置乔灌草控制造价，单项目绿植成本降低约<strong>10%-15%</strong>；施工交底阶段到现场校准图纸与施工偏差，保证设计落地还原度</li>
         </ul>
     </div>
 
     <div class="item">
-        <div class="item-header">
-            <h3>住建委 · 园林景观实习生</h3>
-            <span class="date">2025.07 — 2025.11（5个月）</span>
+        <div class="item-head">
+            <h3>丰都县住房和城乡建设委员会 · 园林绿化实习生</h3>
+            <span class="date">2026.03 — 2026.05（3个月）</span>
         </div>
-        <div class="item-sub">▸ 市政公共景观 · 道路绿化 · 古树保护</div>
+        <div class="item-sub">市政道路绿化 · 乡土植物配置 · 方案文本编制</div>
         <ul>
-            <li>独立负责<strong>3处街边绿地</strong>与<strong>2条道路绿地</strong>景观设计，完成从现场踏勘、平面图绘制到植物配置和方案文本的全过程，设计方案<strong>通过内部评审</strong></li>
-            <li>参与<strong>古树名木保护整治方案</strong>编制，撰写实地调研报告，提出土壤改良、根系保护及周边景观协调方案</li>
-            <li>独立编制植物清单及苗木表，对公共项目采购流程和成本控制有了实际了解</li>
+            <li>负责<strong>1.2km南天湖厢坝道路绿地方案</strong>（面积9100㎡），选用42种乡土植物打造四季分层景观，独立完成彩平图、苗木表及养护方案</li>
+            <li>参与古树名木保护整治项目的现场调研与方案文本撰写，输出3套完整项目报审汇报资料</li>
+            <li>积累了公共项目从调研到方案到报审的完整流程经验，了解市政项目审批规范</li>
         </ul>
     </div>
 </div>
 
-<!-- ========== 项目亮点 ========== -->
+<!-- ========== 项目经历 ========== -->
 <div class="section">
-    <div class="section-title">代表项目</div>
-    <div class="project-grid">
-        <div class="project-card">
+    <div class="section-title">项目与竞赛经历</div>
+
+    <div class="item">
+        <div class="item-head">
+            <h3>校园低碳生态客厅「觅境」 · 项目负责人</h3>
+            <span class="date">2023.05 — 2025.05</span>
+        </div>
+        <ul>
+            <li>主导场地全案设计，划分3大景观分区，选用36种乡土复层植被，整合雨水回收与屋顶绿化体系，场地资源利用率提升15%</li>
+            <li>统筹3000元大创项目经费，兼顾设计目标与财务合规</li>
+        </ul>
+    </div>
+
+    <div class="proj-grid">
+        <div class="proj-card">
+            <span class="tag">花境竞赛</span>
+            <h4>2024 成都大学生主题花境设计竞赛</h4>
+            <p>确立"蜀韵花境·四季共生"主题，SWOT场地分析，75%植物选用乡土品种；ArcGIS处理地形数据；SU+Lumion建模渲染输出效果图与演示视频</p>
+        </div>
+        <div class="proj-card">
+            <span class="tag">花境竞赛</span>
+            <h4>花园杯植物景观设计竞赛</h4>
+            <p>GIS+气候软件划分场地微气候区，筛选30余种适生植物；搭建乔灌草复层种植体系，CAD总平+手绘剖面+Lumion时序效果图，项目获评生态设计突出</p>
+        </div>
+        <div class="proj-card">
+            <span class="tag">花境竞赛</span>
+            <h4>德阳市花月季展花境设计大赛</h4>
+            <p>GIS解析地形土壤，划分3大功能区；提出"月映蜀境"三段式花境方案；CAD绘制1:50剖面图纸，SU+Lumion渲染6张立面效果图</p>
+        </div>
+        <div class="proj-card">
             <span class="tag">毕业设计</span>
-            <h4>丰都县滨江绿地韧性景观设计</h4>
-            <p>以碳中和为目标，将海绵城市理念融入滨江空间，完成从场地分析到雨水花园详图的全套方案（12张系统图纸），获导师高度认可</p>
-        </div>
-        <div class="project-card">
-            <span class="tag">私家庭院</span>
-            <h4>新中式私家别墅庭院（45㎡）</h4>
-            <p>九木堂实习期间独立承担，含造型罗汉松主景、砾石枯山水、防腐木休闲平台，施工图交付后全程跟进落地</p>
-        </div>
-        <div class="project-card">
-            <span class="tag">竞赛</span>
-            <h4>花园杯景观设计竞赛</h4>
-            <p>小尺度花园生态创意设计，侧重植物群落自然化配置与微气候调节策略</p>
-        </div>
-        <div class="project-card">
-            <span class="tag">市政景观</span>
-            <h4>街道绿地微更新设计（住建委）</h4>
-            <p>独立完成3处街边绿地改造方案，采用低维护本土植物配置，协调周边商业界面与居民休憩需求</p>
+            <h4>碳中和背景下滨江绿地韧性景观设计</h4>
+            <p>聚焦生态韧性与碳中和策略，完成前期分析、总平面、竖向设计、功能分区等全过程设计，产出12张系统图纸，获导师高度认可</p>
         </div>
     </div>
 </div>
@@ -209,64 +195,53 @@ body {
 <div class="section">
     <div class="section-title">教育背景</div>
     <div class="item">
-        <div class="item-header">
+        <div class="item-head">
             <h3>普洱学院 · 园林专业 · 本科</h3>
             <span class="date">2022.09 — 2026.06</span>
         </div>
-        <ul>
-            <li>核心课程：园林规划设计 / 园林植物学 / 园林工程 / 景观生态学 / CAD与SketchUp / 园林美术</li>
-            <li>在校实践：校园绿地微更新项目（植物配置与施工参与） / 社区花园营造实践</li>
-        </ul>
+        <p>核心课程：园林规划设计 / 园林树木学 / 园林工程 / 景观生态学 / 植物景观设计 / CAD与SketchUp / 制图基础 / 园林美术</p>
+    </div>
+</div>
+
+<!-- ========== 校园经历 ========== -->
+<div class="section">
+    <div class="section-title">校园经历</div>
+    <div class="two-col">
+        <div style="font-size:12px;color:var(--text-mid);">
+            <strong>院学生会组织部副部长</strong> <span style="color:var(--text-light);font-size:11px;">2023.09 — 2024.09</span><br>
+            牵头策划多场校级活动，对接5个部门协调资源落地，活动获评校级优秀；带领5人小组完成团员评优全流程，修订标准化工作手册
+        </div>
+        <div style="font-size:12px;color:var(--text-mid);">
+            <strong>班级宣传委员</strong> <span style="color:var(--text-light);font-size:11px;">2022.09 — 2026.06</span><br>
+            落地8场班级活动，参与率提升30%，助力获评校级优秀班集体；PS制作20余张宣传海报，设计作品获校级奖项
+        </div>
     </div>
 </div>
 
 <!-- ========== 专业技能 ========== -->
 <div class="section">
     <div class="section-title">专业技能</div>
-    <div class="skills-grid">
-        <div class="sk"><strong>🌿 植物配置</strong>：熟悉华东及西南地区200+种园林植物，擅长乔灌草复层搭配、季相设计，注重低维护与生态功能</div>
-        <div class="sk"><strong>✏️ 手绘表达</strong>：速写与马克笔快速方案沟通，能在客户面前当场画出设计意图</div>
-        <div class="sk"><strong>💻 数字工具</strong>：熟练 AutoCAD / SketchUp / Lumion / Photoshop / Illustrator 全流程</div>
-        <div class="sk"><strong>📐 施工图</strong>：能独立出庭院施工图（平面/立面/节点大样/水电/植物），了解常用材料与工艺做法</div>
-        <div class="sk"><strong>🌏 生态理念</strong>：海绵城市、碳中和、韧性景观——毕业设计有完整实践，非纸上谈兵</div>
-        <div class="sk"><strong>🤝 沟通协作</strong>：装饰公司实习期间直接接触客户，能理解需求、快速响应修改</div>
+    <div class="two-col">
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">设计软件</strong>：熟练 AutoCAD · SketchUp · Lumion · Photoshop · Illustrator，可独立完成从建模到施工图到效果图的全流程</div>
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">植物配置</strong>：熟悉华东及西南200+种园林常用植物，能根据场地气候和养护条件做乔灌草复层搭配与季相设计</div>
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">手绘表达</strong>：可规范绘制园林手绘草图与剖面示意，用于方案阶段的快速沟通</div>
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">施工图</strong>：能按园建和绿化规范出施工图（平面/节点/水电/种植），了解常用材料与施工工艺</div>
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">GIS分析</strong>：掌握ArcGIS基础操作，可用于场地地形、土壤、微气候等前期分析</div>
+        <div style="font-size:12px;color:var(--text-mid);"><strong style="color:var(--accent);">文档能力</strong>：熟练Office，能编制设计说明、苗木表、养护方案，擅长图文排版与报告整理</div>
     </div>
-</div>
-
-<!-- ========== 竞赛与荣誉 ========== -->
-<div class="section">
-    <div class="section-title">竞赛与荣誉</div>
-    <ul style="padding-left:18px;">
-        <li style="font-size:12.5px;color:var(--text-mid);margin-bottom:3px;">德阳杯花境设计竞赛 — 花境植物组合与空间氛围营造</li>
-        <li style="font-size:12.5px;color:var(--text-mid);margin-bottom:3px;">成都花境设计竞赛 — 城市公共空间花境植物景观设计</li>
-        <li style="font-size:12.5px;color:var(--text-mid);margin-bottom:3px;">花园杯景观设计竞赛 — 花园空间生态创意设计</li>
-    </ul>
 </div>
 
 <!-- ========== 作品集 ========== -->
 <div class="section">
     <div class="section-title">在线作品集</div>
-    <p style="font-size:13px;color:var(--text-mid);line-height:1.7;">
-        📂 <strong><a href="https://dddllx.github.io/portfolio/" target="_blank" style="color:var(--accent);">dddllx.github.io/portfolio</a></strong> — 共 <strong>34件</strong> 作品<br>
-        手绘表现（9件）· 竞赛方案（3件）· 课堂作业（10件）· 毕业设计（12件）<br>
-        支持分类浏览与灯箱查看，可直接手机分享给面试官
+    <p style="font-size:12px;color:var(--text-mid);">
+        📂 <strong><a href="https://dddllx.github.io/portfolio/" target="_blank" style="color:var(--accent);">dddllx.github.io/portfolio</a></strong> — 34件作品在线展示：手绘表现（9件）· 竞赛方案（3件）· 课堂作业（10件）· 毕业设计（12件）· 支持分类浏览与Lightbox灯箱查看
     </p>
 </div>
 
-<!-- ========== 其他信息 ========== -->
-<div class="section">
-    <div class="section-title">其他信息</div>
-    <div class="skills-grid">
-        <div class="sk"><strong>语言能力：</strong>普通话二甲 · 英语可阅读专业文献</div>
-        <div class="sk"><strong>到岗时间：</strong>2026年7月，随时可到岗</div>
-        <div class="sk"><strong>个人特质：</strong>踏实细心 · 不娇气能跑工地 · 学习主动</div>
-        <div class="sk"><strong>兴趣爱好：</strong>徒步登山 · 植物摄影 · 水彩</div>
-    </div>
-</div>
-
 <div class="footer">
-    感谢您花时间审阅 · 期待面试机会 · 可随时到岗<br>
-    <a href="https://dddllx.github.io/portfolio/" target="_blank">📂 在线作品集</a> &nbsp;·&nbsp; 1584824397@qq.com &nbsp;·&nbsp; 158-9166-4767
+    感谢审阅 · 期待与您交流 · 可随时到岗<br>
+    <a href="https://dddllx.github.io/portfolio/" target="_blank">📂 作品集</a> &nbsp;·&nbsp; 1584824397@qq.com &nbsp;·&nbsp; 158-9166-4767
 </div>
 
 </div>
