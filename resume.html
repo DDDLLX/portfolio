@@ -24,10 +24,8 @@ body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
-
-/* A4 容器 */
 .page {
-    width: 794px; /* A4 */
+    width: 794px;
     margin: 16px auto;
     background: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.08);
@@ -44,15 +42,10 @@ body {
     display: flex; flex-direction: column; gap: 20px;
     flex-shrink: 0;
 }
-.sidebar .photo-wrap {
-    text-align: center;
-}
+.sidebar .photo-wrap { text-align: center; }
 .sidebar .photo-wrap img {
-    width: 110px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 3px solid rgba(255,255,255,0.25);
+    width: 110px; height: 140px; object-fit: cover;
+    border-radius: 6px; border: 3px solid rgba(255,255,255,0.25);
     background: rgba(255,255,255,0.1);
 }
 .sidebar .name {
@@ -60,9 +53,9 @@ body {
     color: #fff; text-align: center;
 }
 .sidebar .name .en {
-    font-size: 10px; font-weight: 400; opacity: .55; display: block; letter-spacing: 0.1em; margin-top: 2px;
+    font-size: 10px; font-weight: 400; opacity: .55;
+    display: block; letter-spacing: 0.1em; margin-top: 2px;
 }
-
 .side-block h4 {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
     color: #a8d0b4;
@@ -76,67 +69,91 @@ body {
 .side-block .info-row .val { color: #d8e8dc; }
 .side-block .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .side-block .skill-tags .st {
-    font-size: 10px; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 10px; color: #c8dcd0;
+    font-size: 10px; background: rgba(255,255,255,0.1);
+    padding: 2px 8px; border-radius: 10px; color: #c8dcd0;
 }
 
 /* ===== 右侧主体 ===== */
 .main {
-    flex: 1;
-    padding: 36px 32px 30px;
-    display: flex; flex-direction: column; gap: 18px;
+    flex: 1; padding: 28px 28px 22px;
+    display: flex; flex-direction: column; gap: 14px;
 }
-
 .main-section h3 {
-    font-size: 14px; font-weight: 700; color: var(--accent);
-    padding-bottom: 4px; margin-bottom: 10px;
+    font-size: 13.5px; font-weight: 700; color: var(--accent);
+    padding-bottom: 3px; margin-bottom: 8px;
     display: flex; align-items: center; gap: 6px;
 }
 .main-section h3::after {
     content: ''; flex: 1; height: 1px; background: var(--accent); opacity: .3;
 }
-
-/* 求职意向 */
-.intent-row { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 12px; margin-bottom: 2px; }
+.intent-row { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 11.5px; margin-bottom: 2px; }
 .intent-row span strong { color: var(--accent); }
 
-/* 经历条目 */
-.entry { margin-bottom: 12px; }
-.entry-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 1px; }
-.entry-head h4 { font-size: 13px; font-weight: 700; color: var(--text); }
-.entry-head .date { font-size: 11px; color: var(--text-light); white-space: nowrap; }
-.entry .role { font-size: 11.5px; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
-.entry ul { padding-left: 16px; }
-.entry ul li { font-size: 11.5px; color: var(--text-mid); margin-bottom: 1px; line-height: 1.55; }
-.entry ul li::marker { color: var(--accent); font-size: 10px; }
-
-/* 项目网格 */
-.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.proj-card {
-    border: 1px solid var(--line); border-radius: 4px; padding: 9px 11px;
-    border-left: 3px solid var(--accent);
+/* ===== STAR 条目 ===== */
+.star-entry {
+    margin-bottom: 13px;
+    border: 1px solid var(--line); border-radius: 5px;
+    overflow: hidden;
 }
-.proj-card .tag { font-size: 9px; background: var(--bg-light); color: var(--accent); padding: 1px 6px; border-radius: 6px; display: inline-block; margin-bottom: 2px; }
-.proj-card h5 { font-size: 11.5px; margin-bottom: 1px; }
-.proj-card p { font-size: 10.5px; color: var(--text-light); line-height: 1.45; }
+.star-entry .se-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 12px; background: var(--bg-light);
+    border-bottom: 1px solid var(--line); flex-wrap: wrap; gap: 4px;
+}
+.star-entry .se-head h4 { font-size: 12.5px; font-weight: 700; color: var(--text); }
+.star-entry .se-head .date { font-size: 10.5px; color: var(--text-light); white-space: nowrap; }
+.star-entry .se-head .role { font-size: 10.5px; color: var(--accent); font-weight: 600; display: block; width: 100%; }
 
-/* 页脚 */
-.footer { text-align: center; font-size: 10px; color: #bbb; border-top: 1px solid #eee; padding-top: 10px; margin-top: auto; }
+.star-entry .se-body { padding: 8px 12px; }
+.star-row {
+    display: flex; gap: 4px; margin-bottom: 4px;
+    font-size: 10.5px; line-height: 1.5; align-items: flex-start;
+}
+.star-row:last-child { margin-bottom: 0; }
+.star-row .sr-tag {
+    font-size: 9px; font-weight: 700; padding: 0 5px; border-radius: 3px;
+    white-space: nowrap; flex-shrink: 0; min-width: 20px; text-align: center;
+    line-height: 1.7; margin-top: 1px;
+}
+.sr-tag.s { background: #e3f0e8; color: #2b6b3e; }
+.sr-tag.t { background: #fdf0e0; color: #b8781a; }
+.sr-tag.a { background: #e8eef6; color: #2b5ea0; }
+.sr-tag.r { background: #f0e8f2; color: #6b3a7d; }
+.star-row .sr-text { flex: 1; color: var(--text-mid); }
+.star-row .sr-text strong { color: var(--text); }
+
+/* ===== 竞赛卡片 (精简STAR) ===== */
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.comp-card {
+    border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px;
+}
+.comp-card .tag { font-size: 8.5px; background: var(--bg-light); color: var(--accent); padding: 1px 5px; border-radius: 5px; display: inline-block; margin-bottom: 2px; }
+.comp-card h5 { font-size: 11px; margin-bottom: 3px; }
+.comp-card .sr-mini { display: flex; gap: 3px; margin-bottom: 2px; font-size: 10px; line-height: 1.45; }
+.comp-card .sr-mini:last-child { margin-bottom: 0; }
+.comp-card .sr-mini .sm-tag { font-size: 8.5px; font-weight: 700; padding: 0 4px; border-radius: 2px; flex-shrink: 0; margin-top: 1px; }
+.sm-tag.st { background: #e3f0e8; color: #2b6b3e; }
+.sm-tag.sa { background: #e8eef6; color: #2b5ea0; }
+.sm-tag.sr { background: #f0e8f2; color: #6b3a7d; }
+.comp-card .sm-text { color: var(--text-light); flex: 1; }
+
+.footer { text-align: center; font-size: 9.5px; color: #bbb; border-top: 1px solid #eee; padding-top: 8px; margin-top: auto; }
 .footer a { color: var(--accent); }
 
-/* 打印 */
 @media print {
     body { background: #fff; }
     .page { box-shadow: none; margin: 0; width: 100%; }
     .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--accent-dark) !important; }
+    .sr-tag.s, .sr-tag.t, .sr-tag.a, .sr-tag.r { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sm-tag.st, .sm-tag.sa, .sm-tag.sr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .se-head { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #f7faf8 !important; }
 }
-
-/* 响应式 */
 @media (max-width: 820px) {
     .page { width: 100%; flex-direction: column; }
     .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 20px; gap: 12px; align-items: center; }
     .sidebar .photo-wrap img { width: 70px; height: 90px; }
-    .main { padding: 20px; }
-    .proj-grid { grid-template-columns: 1fr; }
+    .main { padding: 16px; }
+    .comp-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -146,19 +163,13 @@ body {
 
 <!-- ═══════════ 左侧栏 ═══════════ -->
 <div class="sidebar">
-
-    <!-- 照片 -->
     <div class="photo-wrap">
         <img src="images/avatar.jpg" alt="代恋雪">
     </div>
-
-    <!-- 姓名 -->
     <div class="name">
         代恋雪
         <span class="en">DAI LIANXUE</span>
     </div>
-
-    <!-- 基本信息 -->
     <div class="side-block">
         <h4>基本信息</h4>
         <div class="info-row"><span class="lbl">出生</span><span class="val">2003 年 · 23岁</span></div>
@@ -167,8 +178,6 @@ body {
         <div class="info-row"><span class="lbl">邮箱</span><span class="val">1584824397@qq.com</span></div>
         <div class="info-row"><span class="lbl">作品集</span><span class="val">dddllx.github.io/portfolio</span></div>
     </div>
-
-    <!-- 教育 -->
     <div class="side-block">
         <h4>教育背景</h4>
         <div style="font-size:11.5px;color:#d8e8dc;line-height:1.5;">
@@ -177,25 +186,14 @@ body {
             2022.09 — 2026.06
         </div>
     </div>
-
-    <!-- 技能标签 -->
     <div class="side-block">
         <h4>专业技能</h4>
         <div class="skill-tags">
-            <span class="st">AutoCAD</span>
-            <span class="st">SketchUp</span>
-            <span class="st">Lumion</span>
-            <span class="st">Photoshop</span>
-            <span class="st">Illustrator</span>
-            <span class="st">ArcGIS</span>
-            <span class="st">手绘表达</span>
-            <span class="st">施工图绘制</span>
-            <span class="st">植物配置</span>
-            <span class="st">效果图渲染</span>
+            <span class="st">AutoCAD</span><span class="st">SketchUp</span><span class="st">Lumion</span>
+            <span class="st">Photoshop</span><span class="st">Illustrator</span><span class="st">ArcGIS</span>
+            <span class="st">手绘表达</span><span class="st">施工图绘制</span><span class="st">植物配置</span><span class="st">效果图渲染</span>
         </div>
     </div>
-
-    <!-- 证书/语言 -->
     <div class="side-block">
         <h4>语言 & 证书</h4>
         <div style="font-size:11px;color:#d8e8dc;line-height:1.6;">
@@ -204,7 +202,6 @@ body {
             C1 驾照（可跑工地）
         </div>
     </div>
-
 </div>
 
 <!-- ═══════════ 右侧主体 ═══════════ -->
@@ -221,73 +218,125 @@ body {
         </div>
     </div>
 
-    <!-- 实习经历 -->
+    <!-- 实习经历 · STAR -->
     <div class="main-section">
         <h3>实习经历</h3>
 
-        <div class="entry">
-            <div class="entry-head">
-                <h4>广东九木堂装饰</h4>
+        <!-- 九木堂 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>广东九木堂装饰 · 设计师助理</h4>
                 <span class="date">2025.10 — 2026.01（4个月）</span>
+                <span class="role">私家庭院全案设计 · 从方案到落地闭环</span>
             </div>
-            <div class="role">设计师助理 · 私家庭院全案设计</div>
-            <ul>
-                <li>独立负责3个别墅庭院全案（新中式、现代简约风格），总面积约720㎡，从场地分析、平面布局、植物季相搭配到效果图输出全程独立完成，其中<strong>2个已施工落地</strong></li>
-                <li>CAD绘制硬质铺装、水景、种植、水电节点等<strong>施工图20余张</strong>，SketchUp搭建场地模型，PS制作鸟瞰及节点效果图12张用于客户汇报</li>
-                <li>整理含90余种常用苗木的素材库；分层配置乔灌草控制造价，单项目绿植成本降低约<strong>10%-15%</strong></li>
-                <li>施工交底阶段到现场校准图纸与施工偏差，<strong>具备从方案到落地的完整闭环经验</strong></li>
-            </ul>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">公司承接别墅庭院业务，需设计师助理独立完成庭院全案，覆盖方案设计到施工配合全流程</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">独立完成庭院方案设计与效果图输出，绘制可落地的施工图纸，配合施工现场确保设计还原</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">独立负责<strong>3个别墅庭院全案</strong>（新中式、现代简约），面积约<strong>720㎡</strong>，完成场地分析→平面布局→植物季相搭配→效果图全流程；CAD绘制硬质铺装、水景、种植、水电节点等<strong>施工图20余张</strong>；SU搭建场地模型，PS制作鸟瞰及节点效果图<strong>12张</strong>；整理含<strong>90余种</strong>苗木的素材库；施工交底阶段到现场校准图纸与施工偏差</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text"><strong>2个庭院已施工落地</strong>；单项目绿植成本降低<strong>10%-15%</strong>；方案一次性通过客户评审；积累了从图纸到建成、从设计到成本控制的完整闭环经验</span>
+                </div>
+            </div>
         </div>
 
-        <div class="entry">
-            <div class="entry-head">
-                <h4>丰都县住房和城乡建设委员会</h4>
+        <!-- 住建委 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>丰都县住房和城乡建设委员会 · 园林绿化实习生</h4>
                 <span class="date">2026.03 — 2026.05（3个月）</span>
+                <span class="role">市政道路绿化设计 · 乡土植物应用</span>
             </div>
-            <div class="role">园林绿化实习生 · 市政道路绿化</div>
-            <ul>
-                <li>负责<strong>1.2km南天湖厢坝道路绿地方案</strong>（面积9100㎡），选用42种乡土植物打造四季分层景观，独立完成彩平图、苗木表及养护方案</li>
-                <li>参与古树名木保护整治项目现场调研与方案文本撰写，输出<strong>3套完整项目报审汇报资料</strong></li>
-                <li>积累了公共项目从调研到方案到报审的完整流程经验，了解市政项目审批规范</li>
-            </ul>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">南天湖厢坝道路沿线需景观提升，同时有古树名木保护整治任务，部门需要实习生独立承担部分设计与文本工作</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">完成道路绿地方案设计及全套报审资料，兼顾生态功能与景观效果，确保方案通过内部评审</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">负责<strong>1.2km道路绿地方案</strong>（面积<strong>9100㎡</strong>），选用<strong>42种乡土植物</strong>打造四季分层景观，独立完成彩平图绘制、苗木表编制及养护方案撰写；参与古树名木保护整治项目现场调研与方案文本撰写</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">输出<strong>3套完整项目报审汇报资料</strong>；方案<strong>通过部门内部评审</strong>；掌握了市政项目从调研→设计→报审的完整流程规范</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- 项目与竞赛 -->
+    <!-- 项目与竞赛 · STAR -->
     <div class="main-section">
         <h3>项目与竞赛经历</h3>
 
-        <div class="entry">
-            <div class="entry-head">
+        <!-- 觅境 -->
+        <div class="star-entry">
+            <div class="se-head">
                 <h4>校园低碳生态客厅「觅境」· 项目负责人</h4>
                 <span class="date">2023.05 — 2025.05</span>
+                <span class="role">大创项目 · 低碳景观设计</span>
             </div>
-            <ul>
-                <li>主导场地全案设计，划分3大分区，选用36种乡土复层植被，整合雨水回收与屋顶绿化体系</li>
-                <li>统筹3000元大创项目经费，兼顾专业设计目标与财务合规要求</li>
-            </ul>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">校园公共空间利用率低、缺乏生态示范场景，学校设立大学生创新创业训练项目支持景观微更新</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">以"双碳目标"为导向，将校园闲置绿地改造为低碳生态示范空间，兼顾展示、休憩与生态教育功能</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">主导场地全案设计，划分<strong>3大景观分区</strong>，选用<strong>36种乡土复层植被</strong>，整合雨水回收系统与屋顶绿化体系；统筹<strong>3000元</strong>项目经费，动态调控兼顾设计目标与财务合规</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">场地资源利用率提升<strong>15%</strong>，苗木成活率提升<strong>18%</strong>；项目经费零超支；为校园提供了可复制的低碳景观改造范式</span>
+                </div>
+            </div>
         </div>
 
-        <div class="proj-grid">
-            <div class="proj-card">
+        <!-- 竞赛卡片 -->
+        <div class="comp-grid">
+            <div class="comp-card">
                 <span class="tag">花境竞赛</span>
                 <h5>成都大学生主题花境设计竞赛</h5>
-                <p>确立"蜀韵花境·四季共生"主题，75%植物选用乡土品种；ArcGIS处理地形数据；SU+Lumion输出效果图与演示视频</p>
+                <div class="sr-mini"><span class="sm-tag st">S/T</span><span class="sm-text">城市公共空间缺乏地域文化特色花境，需打造兼具生态性与文化辨识度的花境方案</span></div>
+                <div class="sr-mini"><span class="sm-tag sa">A</span><span class="sm-text">确立"蜀韵花境·四季共生"主题，SWOT场地分析，<strong>75%</strong>植物选用乡土品种；ArcGIS处理地形数据，PS提取蜀锦、三国文化符号融入平面构图</span></div>
+                <div class="sr-mini"><span class="sm-tag sr">R</span><span class="sm-text">SU+Lumion输出效果图与动态演示视频，作为竞赛核心汇报素材</span></div>
             </div>
-            <div class="proj-card">
+            <div class="comp-card">
                 <span class="tag">花境竞赛</span>
                 <h5>花园杯植物景观设计竞赛</h5>
-                <p>GIS+气候软件划分微气候区，筛选30余种适生植物；乔灌草复层种植体系，CAD总平+手绘剖面+Lumion时序效果图</p>
+                <div class="sr-mini"><span class="sm-tag st">S/T</span><span class="sm-text">需在小尺度花园中实现全年有景的复层植物景观，兼具生态功能与观赏价值</span></div>
+                <div class="sr-mini"><span class="sm-tag sa">A</span><span class="sm-text">GIS+气候软件划分微气候区，筛选<strong>30余种</strong>适生植物；搭建乔灌草复层种植体系，CAD总平+手绘剖面</span></div>
+                <div class="sr-mini"><span class="sm-tag sr">R</span><span class="sm-text">Lumion时序效果图表征四季变化；项目<strong>获评生态设计突出</strong>，实现全年有景</span></div>
             </div>
-            <div class="proj-card">
+            <div class="comp-card">
                 <span class="tag">花境竞赛</span>
                 <h5>德阳市花月季展花境设计大赛</h5>
-                <p>GIS解析地形土壤，划分3大功能区；提出"月映蜀境"三段式花境方案；CAD剖面+SU+Lumion渲染6张立面图</p>
+                <div class="sr-mini"><span class="sm-tag st">S/T</span><span class="sm-text">月季主题花境需融合本地文化，在限定场地内呈现三段式景观序列</span></div>
+                <div class="sr-mini"><span class="sm-tag sa">A</span><span class="sm-text">GIS解析地形土壤，划分<strong>3大功能区</strong>；提出"月映蜀境"三段式花境方案，标准化编制设计文本</span></div>
+                <div class="sr-mini"><span class="sm-tag sr">R</span><span class="sm-text">CAD绘制1:50剖面图纸，SU+Lumion渲染<strong>6张</strong>立面效果图；<strong>景观落地达标率≥90%</strong></span></div>
             </div>
-            <div class="proj-card">
+            <div class="comp-card">
                 <span class="tag">毕业设计</span>
                 <h5>碳中和背景下滨江绿地韧性景观设计</h5>
-                <p>聚焦生态韧性与碳中和策略，产出前期分析、总平面、竖向设计、雨水花园详图等12张系统图纸，获导师高度认可</p>
+                <div class="sr-mini"><span class="sm-tag st">S/T</span><span class="sm-text">丰都县滨江绿地面临生态退化与气候风险，需以碳中和与韧性景观理念提出系统设计方案</span></div>
+                <div class="sr-mini"><span class="sm-tag sa">A</span><span class="sm-text">完成前期场地分析→总平面规划→竖向设计→功能分区→交通流线→景观结构→节点详图全过程设计</span></div>
+                <div class="sr-mini"><span class="sm-tag sr">R</span><span class="sm-text">产出<strong>12张系统图纸</strong>（含雨水花园详图、植物组团配置等核心节点）；获导师<strong>高度认可</strong></span></div>
             </div>
         </div>
     </div>
@@ -295,37 +344,30 @@ body {
     <!-- 校园经历 -->
     <div class="main-section">
         <h3>校园经历</h3>
-
-        <div class="entry">
-            <div class="entry-head">
+        <div class="star-entry">
+            <div class="se-head">
                 <h4>院学生会组织部副部长</h4>
                 <span class="date">2023.09 — 2024.09</span>
             </div>
-            <ul>
-                <li>牵头策划多场校级活动，对接5个校内部门协调资源落地，活动获评校级优秀校园活动</li>
-                <li>带领5人小组完成团员评优全流程工作，修订标准化工作手册</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-head">
-                <h4>班级宣传委员</h4>
-                <span class="date">2022.09 — 2026.06</span>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span><span class="sr-text">院级学生活动缺乏跨部门统筹机制，团员评优流程缺少标准化规范</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span><span class="sr-text">牵头策划多场校级活动，对接<strong>5个校内部门</strong>协调资源落地；带领<strong>5人小组</strong>完成团员评优全流程，修订标准化工作手册</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span><span class="sr-text">活动<strong>获评校级优秀校园活动</strong>；季度工作<strong>完成率100%</strong>；形成可复用的标准化流程文档</span>
+                </div>
             </div>
-            <ul>
-                <li>落地8场班级活动，参与率提升30%，助力班级获评校级优秀班集体</li>
-                <li>PS制作20余张宣传海报，设计作品获校级奖项</li>
-            </ul>
         </div>
     </div>
 
-    <!-- 页脚 -->
     <div class="footer">
         感谢审阅 · 可随时到岗 · 作品集：<a href="https://dddllx.github.io/portfolio/" target="_blank">dddllx.github.io/portfolio</a>
     </div>
 
 </div>
-
 </div>
 
 </body>
