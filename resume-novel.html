@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代恋雪 · 小说内容运营 · 杭州</title>
+<style>
+:root {
+    --accent: #8b5e3c;
+    --accent-dark: #5c3a24;
+    --bg-light: #fdf8f3;
+    --text: #222;
+    --text-mid: #444;
+    --text-light: #666;
+    --line: #e0d8d0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: var(--text);
+    background: #ede8e2;
+    line-height: 1.6;
+    font-size: 13px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.page {
+    width: 794px;
+    margin: 16px auto;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: flex;
+    min-height: 1123px;
+}
+
+/* ===== 左侧栏 ===== */
+.sidebar {
+    width: 220px;
+    background: var(--accent-dark);
+    color: #f0e6dc;
+    padding: 36px 24px 30px;
+    display: flex; flex-direction: column; gap: 20px;
+    flex-shrink: 0;
+}
+.sidebar .photo-wrap { text-align: center; }
+.sidebar .photo-wrap img {
+    width: 110px; height: 140px; object-fit: cover;
+    border-radius: 6px; border: 3px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+}
+.sidebar .name {
+    font-size: 22px; font-weight: 700; letter-spacing: 0.06em;
+    color: #fff; text-align: center;
+}
+.sidebar .name .en {
+    font-size: 10px; font-weight: 400; opacity: .5;
+    display: block; letter-spacing: 0.1em; margin-top: 2px;
+}
+.side-block h4 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: #c8a88c;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 5px; margin-bottom: 10px;
+}
+.side-block .info-row {
+    display: flex; align-items: baseline; gap: 6px; margin-bottom: 5px; font-size: 11.5px;
+}
+.side-block .info-row .lbl { color: #c8a88c; font-size: 10.5px; min-width: 36px; flex-shrink: 0; }
+.side-block .info-row .val { color: #e8d8c8; }
+.side-block .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.side-block .skill-tags .st {
+    font-size: 10px; background: rgba(255,255,255,0.08);
+    padding: 2px 8px; border-radius: 10px; color: #d8c8b8;
+}
+.side-block .genre-list { font-size: 10.5px; color: #d8c8b8; line-height: 1.7; }
+
+/* ===== 右侧主体 ===== */
+.main {
+    flex: 1; padding: 28px 28px 22px;
+    display: flex; flex-direction: column; gap: 14px;
+}
+.main-section h3 {
+    font-size: 13.5px; font-weight: 700; color: var(--accent);
+    padding-bottom: 3px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 6px;
+}
+.main-section h3::after {
+    content: ''; flex: 1; height: 1px; background: var(--accent); opacity: .25;
+}
+.intent-row { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 11.5px; margin-bottom: 2px; }
+.intent-row span strong { color: var(--accent); }
+
+/* STAR entry */
+.star-entry {
+    margin-bottom: 12px;
+    border: 1px solid var(--line); border-radius: 5px;
+    overflow: hidden;
+}
+.star-entry .se-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 12px; background: var(--bg-light);
+    border-bottom: 1px solid var(--line); flex-wrap: wrap; gap: 4px;
+}
+.star-entry .se-head h4 { font-size: 12.5px; font-weight: 700; color: var(--text); }
+.star-entry .se-head .date { font-size: 10.5px; color: var(--text-light); white-space: nowrap; }
+.star-entry .se-head .role { font-size: 10.5px; color: var(--accent); font-weight: 600; display: block; width: 100%; }
+.star-entry .se-body { padding: 8px 12px; }
+.star-row {
+    display: flex; gap: 4px; margin-bottom: 4px;
+    font-size: 10.5px; line-height: 1.5; align-items: flex-start;
+}
+.star-row:last-child { margin-bottom: 0; }
+.star-row .sr-tag {
+    font-size: 9px; font-weight: 700; padding: 0 5px; border-radius: 3px;
+    white-space: nowrap; flex-shrink: 0; min-width: 20px; text-align: center;
+    line-height: 1.7; margin-top: 1px;
+}
+.sr-tag.s { background: #f0e8dd; color: #8b5e3c; }
+.sr-tag.t { background: #fdf0e0; color: #b8781a; }
+.sr-tag.a { background: #e8eef6; color: #2b5ea0; }
+.sr-tag.r { background: #ede4f2; color: #6b3a7d; }
+.star-row .sr-text { flex: 1; color: var(--text-mid); }
+.star-row .sr-text strong { color: var(--text); }
+
+/* 补充信息条目 */
+.extra-entry { margin-bottom: 8px; }
+.extra-entry .ee-head { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.extra-entry .ee-sub { font-size: 10.5px; color: var(--text-light); line-height: 1.55; }
+
+.footer { text-align: center; font-size: 9.5px; color: #bbb; border-top: 1px solid #eee; padding-top: 8px; margin-top: auto; }
+.footer a { color: var(--accent); }
+
+@media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; width: 100%; }
+    .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--accent-dark) !important; }
+    .sr-tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .se-head { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #fdf8f3 !important; }
+}
+@media (max-width: 820px) {
+    .page { width: 100%; flex-direction: column; }
+    .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 20px; gap: 12px; align-items: center; }
+    .sidebar .photo-wrap img { width: 70px; height: 90px; }
+    .main { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- ═══════════ 左侧栏 ═══════════ -->
+<div class="sidebar">
+    <div class="photo-wrap">
+        <img src="images/avatar.jpg" alt="代恋雪">
+    </div>
+    <div class="name">
+        代恋雪
+        <span class="en">DAI LIANXUE</span>
+    </div>
+
+    <div class="side-block">
+        <h4>基本信息</h4>
+        <div class="info-row"><span class="lbl">出生</span><span class="val">2003 年 · 23岁</span></div>
+        <div class="info-row"><span class="lbl">籍贯</span><span class="val">重庆市</span></div>
+        <div class="info-row"><span class="lbl">手机</span><span class="val">158-9166-4767</span></div>
+        <div class="info-row"><span class="lbl">邮箱</span><span class="val">1584824397@qq.com</span></div>
+        <div class="info-row"><span class="lbl">学历</span><span class="val">本科 · 2026届</span></div>
+    </div>
+
+    <div class="side-block">
+        <h4>阅读基因</h4>
+        <div style="font-size:11px;color:#e8d8c8;line-height:1.5;">
+            15年资深网文读者<br>
+            累计阅读量10000+本<br>
+            覆盖全网主流平台
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>熟悉的小说类型</h4>
+        <div class="genre-list">
+            言情 · 古言 · 现言 · 耽美<br>
+            玄幻 · 仙侠 · 都市 · 悬疑<br>
+            无限流 · 穿书 · 重生 · 种田<br>
+            轻小说 · 同人 · 科幻 · 奇幻<br>
+            女频主流榜单全类型覆盖
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>常用平台</h4>
+        <div class="skill-tags">
+            <span class="st">晋江文学城</span><span class="st">起点中文</span>
+            <span class="st">番茄小说</span><span class="st">七猫</span>
+            <span class="st">豆瓣阅读</span><span class="st">长佩</span>
+            <span class="st">小红书</span><span class="st">微信公众号</span>
+            <span class="st">微博超话</span><span class="st">抖音推书</span>
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>核心能力</h4>
+        <div class="skill-tags">
+            <span class="st">内容审读</span><span class="st">选题策划</span>
+            <span class="st">文案撰写</span><span class="st">社群运营</span>
+            <span class="st">数据分析</span><span class="st">排版编辑</span>
+            <span class="st">活动策划</span><span class="st">135/秀米</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ 右侧主体 ═══════════ -->
+<div class="main">
+
+    <!-- 求职意向 -->
+    <div class="main-section">
+        <h3>求职意向</h3>
+        <div class="intent-row">
+            <span><strong>目标岗位</strong> 小说内容运营 / 网文编辑 / 内容策划</span>
+            <span><strong>期望城市</strong> 杭州</span>
+            <span><strong>期望薪资</strong> 5000-7000元/月</span>
+            <span><strong>到岗时间</strong> 随时</span>
+        </div>
+    </div>
+
+    <!-- 核心优势 -->
+    <div class="main-section">
+        <h3>核心优势</h3>
+        <div style="font-size:11.5px;color:var(--text-mid);line-height:1.7;background:var(--bg-light);padding:10px 14px;border-radius:4px;border:1px solid var(--line);">
+            <strong>15年深度网文阅读史</strong>，对晋江、起点、番茄、七猫等主流平台的榜单机制、读者偏好、类型趋势有长期跟踪和直观体感。能快速判断一部作品的<strong>市场潜力与目标受众</strong>，不是"只看过几本热门"的泛读者。<br>
+            <strong>兼具内容创作与活动策划双重经验</strong>：有短篇小说产出和自媒体推书号运营经历，同时有学生会大型活动策划执行经验，能做内容也能做传播。
+        </div>
+    </div>
+
+    <!-- 相关经历 -->
+    <div class="main-section">
+        <h3>相关经历</h3>
+
+        <!-- 经历1：自媒体推书 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>小红书/微信公众号「书荒急救站」· 创始人 & 内容主理人</h4>
+                <span class="date">2024.03 — 至今（2年）</span>
+                <span class="role">个人自媒体 · 小说推荐与内容运营</span>
+            </div>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">身边大量读者存在"书荒找不到好书"的痛点，而市面上的推书号内容同质化严重、缺乏深度拆解</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">打造一个有辨识度的小说推荐账号，用深度内容吸引精准读者粉丝，验证自己对内容趋势的判断力</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">小红书+微信公众号双平台运营，发布<strong>200+篇</strong>推书笔记/文章；按"类型+爽点+人设"三维度拆解每本推荐小说，形成固定栏目「冷门好文挖掘」「完结文扫雷」「新文速递」；追平台榜单与热点话题，结合微博超话、抖音推书趋势预判下一波流行题材</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">小红书累计粉丝<strong>3200+</strong>，单篇最高阅读量<strong>2.7万</strong>，多篇笔记被晋江/长佩官方账号点赞互动；微信公众号稳定阅读量<strong>300-500</strong>；积累了一批活跃书粉社群（微信群<strong>200+人</strong>），日常讨论活跃</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 经历2：短篇小说创作 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>短篇小说创作 & 线上投稿实践</h4>
+                <span class="date">2023.09 — 至今</span>
+                <span class="role">个人创作 · 内容产出与读者反馈闭环</span>
+            </div>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">长期阅读积累了大量叙事技巧和类型认知，希望通过实际创作深入理解"创作者视角"——这对内容运营判断稿件质量至关重要</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">产出完整短篇作品并在线上平台发布，验证从选题→写作→发布→读者反馈的完整链路</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">完成<strong>6篇</strong>短篇小说（古言2篇、现言2篇、悬疑1篇、玄幻1篇），在晋江/知乎盐选/豆瓣阅读等平台投稿发布；根据读者评论和收藏数据反复修改开头、人设和节奏；参加<strong>2次线上写作征稿活动</strong>，1篇入围复选</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">1篇知乎盐选短篇获得<strong>500+赞同</strong>；深刻理解了"前三章定生死"的市场规律——能从创作者和读者双视角判断一部作品的潜力与问题所在</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 经历3：线上编辑助理 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>线上小说工作室 · 远程审读编辑（兼职）</h4>
+                <span class="date">2025.06 — 2025.12（7个月）</span>
+                <span class="role">远程兼职 · 稿件初筛与审读报告</span>
+            </div>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">小型线上小说工作室（3-5人团队）专注女频网文产出，需兼职编辑协助做投稿初筛与市场分析</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag t">T</span>
+                    <span class="sr-text">对投递稿件进行初筛，输出审读意见，辅助团队判断哪些稿件值得签约跟进</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">每周审读<strong>8-12篇</strong>投稿短篇/开篇，从"人设吸引力、情节节奏、市场匹配度、平台适配性"四个维度出具审读意见；跟踪晋江/起点/番茄榜单变化，整理<strong>每周热门题材简报</strong>供团队选题参考；协助维护作者群，收集作者的创作反馈和平台数据</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">累计审读稿件<strong>200+篇</strong>，推荐签约<strong>8篇</strong>（其中3篇在平台获得不错数据）；整理的选题简报帮助团队及时跟进了一波"重生+种田"热度</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 经历4：学生会活动策划 -->
+        <div class="star-entry">
+            <div class="se-head">
+                <h4>院学生会组织部副部长 · 宣传委员</h4>
+                <span class="date">2023.09 — 2024.09</span>
+                <span class="role">活动策划执行 · 文字宣传 · 团队统筹</span>
+            </div>
+            <div class="se-body">
+                <div class="star-row">
+                    <span class="sr-tag s">S</span>
+                    <span class="sr-text">院级学生活动参与度逐年下滑，宣传物料缺乏吸引力，活动流程缺少标准化</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag a">A</span>
+                    <span class="sr-text">牵头策划多场校级活动，对接<strong>5个校内部门</strong>协调资源；PS制作<strong>20余张</strong>宣传海报，撰写<strong>50+篇</strong>活动简讯及推文；修订标准化工作手册，优化活动流程文档</span>
+                </div>
+                <div class="star-row">
+                    <span class="sr-tag r">R</span>
+                    <span class="sr-text">活动<strong>获评校级优秀校园活动</strong>；班级活动参与率提升<strong>30%</strong>；海报设计获校级奖项，3项活动全校推广</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="main-section">
+        <h3>教育背景</h3>
+        <div style="font-size:11.5px;color:var(--text-mid);">
+            <strong>普洱学院 · 园林专业 · 本科</strong> <span style="color:var(--text-light);font-size:10.5px;">2022.09 — 2026.06</span><br>
+            <span style="font-size:10.5px;color:var(--text-light);">园林专业训练了我的系统性思维与审美能力——植物配置讲究层次与节奏，内容运营同样需要对结构和节奏的把控。跨专业背景带来不同于纯文科生的视角。</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        感谢审阅 · 可随时到岗 · 杭州<br>
+        1584824397@qq.com · 158-9166-4767
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
