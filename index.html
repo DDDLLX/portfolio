@@ -497,10 +497,10 @@
         <!-- Filter tabs -->
         <div class="gallery-filters">
             <button class="active" data-filter="all">全部<span class="count">34</span></button>
-            <button data-filter="手绘">手绘<span class="count">9</span></button>
-            <button data-filter="竞赛">机绘·竞赛<span class="count">3</span></button>
-            <button data-filter="课堂作业">机绘·课堂作业<span class="count">10</span></button>
-            <button data-filter="毕业设计">机绘·毕业设计<span class="count">12</span></button>
+            <button data-filter="毕业设计">毕业设计<span class="count">12</span></button>
+            <button data-filter="竞赛">竞赛方案<span class="count">3</span></button>
+            <button data-filter="课堂作业">课程项目<span class="count">10</span></button>
+            <button data-filter="手绘">手绘表现<span class="count">9</span></button>
         </div>
 
         <!-- Gallery grid -->
@@ -561,47 +561,47 @@
 
 /* ===== Portfolio Data ===== */
 const works = [
-    // ── 手绘 (9) ── */
-    {cat:'手绘',title:'手绘作品 — 景观速写（一）',src:'images/shouhui/1cd5b3b5674e95f6a8a207f987e684cc.jpg'},
-    {cat:'手绘',title:'手绘作品 — 景观速写（二）',src:'images/shouhui/3b78b327397f19813faf8c146bb51d83.jpg'},
-    {cat:'手绘',title:'手绘作品 — 景观速写（三）',src:'images/shouhui/6e983dbbdca094cd393f454f4344345b.jpg'},
-    {cat:'手绘',title:'手绘作品 — 马克笔表现（一）',src:'images/shouhui/ab9f61dc0e9b7ec08291746d6828788e.jpg'},
-    {cat:'手绘',title:'手绘作品 — 马克笔表现（二）',src:'images/shouhui/c79807b8e7849dfdbcbf0eb38e942416.jpg'},
-    {cat:'手绘',title:'手绘作品 — 马克笔表现（三）',src:'images/shouhui/c8fa274bd150ae7e2bafb4c7be8f823e.jpg'},
-    {cat:'手绘',title:'手绘作品 — 彩铅渲染（一）',src:'images/shouhui/d491969944dcef4bb3f4f6379e8a1be6.jpg'},
-    {cat:'手绘',title:'手绘作品 — 彩铅渲染（二）',src:'images/shouhui/d512178b3ab06ac5143ca7d174084340.jpg'},
-    {cat:'手绘',title:'手绘作品 — 彩铅渲染（三）',src:'images/shouhui/f501d2d7305328a0928e60ece43667b6.jpg'},
-
-    // ── 竞赛 (3) ── */
-    {cat:'竞赛',title:'德阳杯花境设计竞赛',src:'images/jingsai/deyangbei.jpg'},
-    {cat:'竞赛',title:'成都花境设计竞赛',src:'images/jingsai/chengdu.jpg'},
-    {cat:'竞赛',title:'花园杯景观设计竞赛',src:'images/jingsai/huayuanbei.jpg'},
-
-    // ── 课堂作业 (10) ── */
-    {cat:'课堂作业',title:'中央道路绿地设计',src:'images/ketangzuoye/zhongyang-daolu.jpg'},
-    {cat:'课堂作业',title:'公园大门设计鸟瞰图（小组作业）',src:'images/ketangzuoye/gongyuan-damen.jpg'},
-    {cat:'课堂作业',title:'小区植物种植设计',src:'images/ketangzuoye/xiaoqu-zhiwu.jpg'},
-    {cat:'课堂作业',title:'庭院景观平面图',src:'images/ketangzuoye/tingyuan-pingmian.jpg'},
-    {cat:'课堂作业',title:'庭院景观效果图',src:'images/ketangzuoye/tingyuan-xiaoguo.jpg'},
-    {cat:'课堂作业',title:'文化长廊景观效果图',src:'images/ketangzuoye/wenhua-changlang.jpg'},
-    {cat:'课堂作业',title:'茶山景观平面图',src:'images/ketangzuoye/chashan-pingmian.png'},
-    {cat:'课堂作业',title:'街头小绿地彩色平面图',src:'images/ketangzuoye/jietou-lvdi.png'},
-    {cat:'课堂作业',title:'街边绿地种植设计平面图',src:'images/ketangzuoye/jiebian-lvdi.jpg'},
-    {cat:'课堂作业',title:'校园绿地彩色平面图',src:'images/ketangzuoye/xiaoyuan-lvdi.jpg'},
-
-    // ── 毕业设计 (12) ── */
+    // ── 毕业设计 (12) · 大图优先 ── */
+    {cat:'毕业设计',title:'毕业设计 — 滨江绿地鸟瞰图',src:'images/biyesheji/niaokan.jpg'},
+    {cat:'毕业设计',title:'毕业设计 — 总平面图',src:'images/biyesheji/pic3.png'},
     {cat:'毕业设计',title:'毕业设计 — 前期分析（一）',src:'images/biyesheji/pic1.png'},
     {cat:'毕业设计',title:'毕业设计 — 前期分析（二）',src:'images/biyesheji/pic2.png'},
-    {cat:'毕业设计',title:'毕业设计 — 总平面图',src:'images/biyesheji/pic3.png'},
     {cat:'毕业设计',title:'毕业设计 — 竖向设计图',src:'images/biyesheji/pic4.png'},
     {cat:'毕业设计',title:'毕业设计 — 功能分区图',src:'images/biyesheji/pic6.png'},
     {cat:'毕业设计',title:'毕业设计 — 交通流线图',src:'images/biyesheji/pic7.png'},
     {cat:'毕业设计',title:'毕业设计 — 景观结构图',src:'images/biyesheji/pic9.png'},
     {cat:'毕业设计',title:'毕业设计 — 节点详图',src:'images/biyesheji/pic13.png'},
-    {cat:'毕业设计',title:'毕业设计 — 场地平面图',src:'images/biyesheji/changdi-pingmian-2.jpg'},
-    {cat:'毕业设计',title:'毕业设计 — 植物组团配置',src:'images/biyesheji/zhiwu-zutuan.jpg'},
     {cat:'毕业设计',title:'毕业设计 — 雨水花园详图',src:'images/biyesheji/yushui-huayuan.jpg'},
-    {cat:'毕业设计',title:'毕业设计 — 滨江绿地鸟瞰图',src:'images/biyesheji/niaokan.jpg'}
+    {cat:'毕业设计',title:'毕业设计 — 植物组团配置',src:'images/biyesheji/zhiwu-zutuan.jpg'},
+    {cat:'毕业设计',title:'毕业设计 — 场地平面图',src:'images/biyesheji/changdi-pingmian-2.jpg'},
+
+    // ── 竞赛 (3) · 专业方案 ── */
+    {cat:'竞赛',title:'成都花境设计竞赛 — 蜀韵花境·四季共生',src:'images/jingsai/chengdu.jpg'},
+    {cat:'竞赛',title:'花园杯景观设计竞赛 — 生态复层种植体系',src:'images/jingsai/huayuanbei.jpg'},
+    {cat:'竞赛',title:'德阳杯花境设计竞赛 — 月映蜀境三段式花境',src:'images/jingsai/deyangbei.jpg'},
+
+    // ── 课程项目 (10) ── */
+    {cat:'课堂作业',title:'庭院景观效果图',src:'images/ketangzuoye/tingyuan-xiaoguo.jpg'},
+    {cat:'课堂作业',title:'庭院景观平面图',src:'images/ketangzuoye/tingyuan-pingmian.jpg'},
+    {cat:'课堂作业',title:'小区植物种植设计',src:'images/ketangzuoye/xiaoqu-zhiwu.jpg'},
+    {cat:'课堂作业',title:'中央道路绿地设计',src:'images/ketangzuoye/zhongyang-daolu.jpg'},
+    {cat:'课堂作业',title:'街头小绿地彩色平面图',src:'images/ketangzuoye/jietou-lvdi.png'},
+    {cat:'课堂作业',title:'街边绿地种植设计平面图',src:'images/ketangzuoye/jiebian-lvdi.jpg'},
+    {cat:'课堂作业',title:'校园绿地彩色平面图',src:'images/ketangzuoye/xiaoyuan-lvdi.jpg'},
+    {cat:'课堂作业',title:'文化长廊景观效果图',src:'images/ketangzuoye/wenhua-changlang.jpg'},
+    {cat:'课堂作业',title:'茶山景观平面图',src:'images/ketangzuoye/chashan-pingmian.png'},
+    {cat:'课堂作业',title:'公园大门设计鸟瞰图（小组作业）',src:'images/ketangzuoye/gongyuan-damen.jpg'},
+
+    // ── 手绘表现 (9) · 基础功底 ── */
+    {cat:'手绘',title:'手绘 — 马克笔表现（一）',src:'images/shouhui/c8fa274bd150ae7e2bafb4c7be8f823e.jpg'},
+    {cat:'手绘',title:'手绘 — 马克笔表现（二）',src:'images/shouhui/c79807b8e7849dfdbcbf0eb38e942416.jpg'},
+    {cat:'手绘',title:'手绘 — 马克笔表现（三）',src:'images/shouhui/ab9f61dc0e9b7ec08291746d6828788e.jpg'},
+    {cat:'手绘',title:'手绘 — 彩铅渲染（一）',src:'images/shouhui/d491969944dcef4bb3f4f6379e8a1be6.jpg'},
+    {cat:'手绘',title:'手绘 — 彩铅渲染（二）',src:'images/shouhui/d512178b3ab06ac5143ca7d174084340.jpg'},
+    {cat:'手绘',title:'手绘 — 彩铅渲染（三）',src:'images/shouhui/f501d2d7305328a0928e60ece43667b6.jpg'},
+    {cat:'手绘',title:'手绘 — 景观速写（一）',src:'images/shouhui/1cd5b3b5674e95f6a8a207f987e684cc.jpg'},
+    {cat:'手绘',title:'手绘 — 景观速写（二）',src:'images/shouhui/3b78b327397f19813faf8c146bb51d83.jpg'},
+    {cat:'手绘',title:'手绘 — 景观速写（三）',src:'images/shouhui/6e983dbbdca094cd393f454f4344345b.jpg'}
 ];
 
 const galleryGrid = document.getElementById('galleryGrid');
@@ -614,7 +614,7 @@ function renderGallery(items){
         return;
     }
     galleryGrid.innerHTML = items.map((w,i)=>{
-        const catCN = {手绘:'手绘',竞赛:'机绘 · 竞赛',课堂作业:'机绘 · 课堂作业',毕业设计:'机绘 · 毕业设计'};
+        const catCN = {毕业设计:'毕业设计',竞赛:'竞赛方案',课堂作业:'课程项目',手绘:'手绘表现'};
         return `
         <div class="gallery-item" data-index="${i}" data-cat="${w.cat}">
             <img class="thumb" src="${w.src}" alt="${w.title}" loading="lazy" onerror="this.style.background='var(--sage-wash)';this.style.minHeight='200px';">
