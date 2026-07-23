@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代恋雪 · 游戏策划 · 杭州</title>
+<style>
+:root {
+    --accent: #d4380d;
+    --accent-dark: #7a1f06;
+    --bg-light: #fffaf8;
+    --text: #222;
+    --text-mid: #444;
+    --text-light: #666;
+    --line: #e8d8d0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    color: var(--text);
+    background: #f0e8e4;
+    line-height: 1.6;
+    font-size: 13px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.page {
+    width: 794px; margin: 16px auto; background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: flex; min-height: 1123px;
+}
+
+.sidebar {
+    width: 220px; background: var(--accent-dark); color: #f8e8e0;
+    padding: 36px 24px 30px; display: flex; flex-direction: column; gap: 20px; flex-shrink: 0;
+}
+.sidebar .photo-wrap { text-align: center; }
+.sidebar .photo-wrap img {
+    width: 110px; height: 140px; object-fit: cover; border-radius: 6px;
+    border: 3px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1);
+}
+.sidebar .name { font-size: 22px; font-weight: 700; letter-spacing: 0.06em; color: #fff; text-align: center; }
+.sidebar .name .en { font-size: 10px; font-weight: 400; opacity: .5; display: block; letter-spacing: 0.1em; margin-top: 2px; }
+.side-block h4 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    color: #f0a080; border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 5px; margin-bottom: 10px;
+}
+.side-block .info-row { display: flex; align-items: baseline; gap: 6px; margin-bottom: 5px; font-size: 11.5px; }
+.side-block .info-row .lbl { color: #f0a080; font-size: 10.5px; min-width: 36px; flex-shrink: 0; }
+.side-block .info-row .val { color: #f0d8c8; }
+.side-block .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.side-block .skill-tags .st {
+    font-size: 10px; background: rgba(255,255,255,0.08);
+    padding: 2px 8px; border-radius: 10px; color: #f0d0c0;
+}
+
+.main { flex: 1; padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 16px; }
+.main-section h3 {
+    font-size: 13.5px; font-weight: 700; color: var(--accent);
+    padding-bottom: 3px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 6px;
+}
+.main-section h3::after { content: ''; flex: 1; height: 1px; background: var(--accent); opacity: .25; }
+.intent-row { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 11.5px; }
+.intent-row span strong { color: var(--accent); }
+
+.highlight-box {
+    font-size: 11.5px; color: var(--text-mid); line-height: 1.7;
+    background: var(--bg-light); padding: 10px 14px;
+    border-radius: 4px; border: 1px solid var(--line);
+}
+
+.exp { margin-bottom: 12px; }
+.exp-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 3px; }
+.exp-head h4 { font-size: 13px; font-weight: 700; }
+.exp-head .date { font-size: 11px; color: var(--text-light); white-space: nowrap; }
+.exp-sub { font-size: 11px; color: var(--accent); font-weight: 600; margin-bottom: 4px; }
+.exp ul { padding-left: 17px; }
+.exp ul li { font-size: 11.5px; color: var(--text-mid); margin-bottom: 3px; line-height: 1.6; }
+.exp ul li::marker { color: var(--accent); }
+.exp ul li strong { color: var(--text); }
+
+.footer { text-align: center; font-size: 9.5px; color: #bbb; border-top: 1px solid #eee; padding-top: 8px; margin-top: auto; }
+
+@media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; width: 100%; }
+    .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--accent-dark) !important; }
+}
+@media (max-width: 820px) {
+    .page { width: 100%; flex-direction: column; }
+    .sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 20px; gap: 12px; align-items: center; }
+    .sidebar .photo-wrap img { width: 70px; height: 90px; }
+    .main { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<!-- ═══════════ 左侧栏 ═══════════ -->
+<div class="sidebar">
+    <div class="photo-wrap">
+        <img src="images/avatar.jpg" alt="代恋雪">
+    </div>
+    <div class="name">
+        代恋雪
+        <span class="en">DAI LIANXUE</span>
+    </div>
+
+    <div class="side-block">
+        <h4>基本信息</h4>
+        <div class="info-row"><span class="lbl">出生</span><span class="val">2003 年 · 23岁</span></div>
+        <div class="info-row"><span class="lbl">籍贯</span><span class="val">重庆市</span></div>
+        <div class="info-row"><span class="lbl">手机</span><span class="val">158-9166-4767</span></div>
+        <div class="info-row"><span class="lbl">邮箱</span><span class="val">1584824397@qq.com</span></div>
+        <div class="info-row"><span class="lbl">学历</span><span class="val">本科 · 2026届</span></div>
+    </div>
+
+    <div class="side-block">
+        <h4>游戏基因</h4>
+        <div style="font-size:11px;color:#f0d8c8;line-height:1.5;">
+            10年+ 游戏玩龄<br>
+            深度体验 50+ 款作品<br>
+            乙女/RPG/AVG/模拟经营<br>
+            同人二创持续产出
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>擅长游戏类型</h4>
+        <div class="skill-tags">
+            <span class="st">乙女向</span><span class="st">RPG</span>
+            <span class="st">AVG</span><span class="st">模拟经营</span>
+            <span class="st">开放世界</span><span class="st">卡牌</span>
+            <span class="st">女性向</span><span class="st">二次元</span>
+            <span class="st">悬疑解谜</span><span class="st">叙事向</span>
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>代表体验作品</h4>
+        <div style="font-size:10.5px;color:#f0d8c8;line-height:1.6;">
+            恋与深空 · 未定事件簿 · 原神<br>
+            光与夜之恋 · 时空中的绘旅人<br>
+            星露谷物语 · 江南百景图<br>
+            重返未来1999 · 无期迷途
+        </div>
+    </div>
+
+    <div class="side-block">
+        <h4>工具技能</h4>
+        <div class="skill-tags">
+            <span class="st">系统拆解</span><span class="st">文案撰写</span>
+            <span class="st">剧情设计</span><span class="st">人设塑造</span>
+            <span class="st">PS/AI</span><span class="st">剪映</span>
+            <span class="st">Excel/数据</span><span class="st">XMind</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════ 右侧主体 ═══════════ -->
+<div class="main">
+
+    <!-- 求职意向 -->
+    <div class="main-section">
+        <h3>求职意向</h3>
+        <div class="intent-row">
+            <span><strong>目标岗位</strong> 游戏策划（文案/系统/执行方向）</span>
+            <span><strong>期望城市</strong> 杭州</span>
+            <span><strong>期望薪资</strong> 5000-8000元/月</span>
+            <span><strong>到岗时间</strong> 随时</span>
+        </div>
+    </div>
+
+    <!-- 核心优势 -->
+    <div class="main-section">
+        <h3>核心优势</h3>
+        <div class="highlight-box">
+            <strong>1. 深度游戏理解 + 创作者视角</strong>：10年+游戏玩龄，深度体验 50+ 款乙女/RPG/AVG/模拟经营类作品，对<strong>女性向游戏叙事设计、角色塑造、付费心流</strong>有玩家侧长期体感。同时产出过同人二创内容，能从"创作者+玩家"双视角理解角色魅力和剧情节奏。<br>
+            <strong>2. 叙事与系统双重敏感度</strong>：15年网文阅读积累了对<strong>世界观架构、人设逻辑、剧情节奏</strong>的系统认知——这与游戏文案策划的核心能力高度重合。长期玩策略和模拟经营类游戏，对<strong>养成数值、资源循环、系统耦合</strong>有直观感知。<br>
+            <strong>3. 可落地的执行力</strong>：会 PS/AI 做视觉稿，能写策划案和文案，有学生会多部门协调经验——不是"只会玩游戏提意见"，而是能把想法转化为可执行的文档和原型。
+        </div>
+    </div>
+
+    <!-- 相关经历 -->
+    <div class="main-section">
+        <h3>相关经历</h3>
+
+        <!-- 经历1：游戏拆解分析 -->
+        <div class="exp">
+            <div class="exp-head">
+                <h4>游戏拆解与反推设计练习 · 个人项目</h4>
+                <span class="date">2024.06 — 至今</span>
+            </div>
+            <div class="exp-sub">系统拆解 · 数值反推 · 文案分析 · 策划案撰写</div>
+            <ul>
+                <li>对 <strong>5款</strong> 深度体验的游戏做系统拆解（含乙女向卡牌养成、模拟经营、二次元RPG），从<strong>核心循环、资源流转、付费设计、剧情驱动</strong>四个维度输出分析文档</li>
+                <li>反推 <strong>2款</strong> 女性向手游的养成数值模型（角色升级曲线/材料消耗/体力分配），用 Excel 搭建数值模拟表验证设计逻辑</li>
+                <li>为 1款 自设乙女向 AVG 撰写<strong>世界观设定、3条角色人设小传、前3章剧情大纲</strong>及关键分支选择节点</li>
+                <li>分析 <strong>3款</strong> 热门二次元游戏的文案风格与叙事节奏，对比不同游戏的<strong>角色塑造手法和玩家情感触发点</strong></li>
+            </ul>
+        </div>
+
+        <!-- 经历2：同人创作 -->
+        <div class="exp">
+            <div class="exp-head">
+                <h4>游戏同人二创 & 剧情写作实践</h4>
+                <span class="date">2023.09 — 至今</span>
+            </div>
+            <div class="exp-sub">同人创作 · 角色理解 · 叙事练习</div>
+            <ul>
+                <li>产出 <strong>8篇</strong> 游戏IP同人作品（国漫/游戏/影视多赛道），在 LOFTER 和 AO3 发布，累计 <strong>1000+热度</strong>，1篇入选标签页推荐</li>
+                <li>创作过程中深入拆解原作角色——<strong>人设标签、情感驱动、行为逻辑</strong>，在同人创作中做到"不OOC（Out of Character）"——这种角色一致性思维直接适用于游戏人设策划</li>
+                <li>同人作品评论区收集读者反馈，理解<strong>"什么样的剧情转折让读者爽、什么样的角色互动让读者上头"</strong></li>
+            </ul>
+        </div>
+
+        <!-- 经历3：短篇创作 -->
+        <div class="exp">
+            <div class="exp-head">
+                <h4>原创短篇小说创作</h4>
+                <span class="date">2023.09 — 至今</span>
+            </div>
+            <div class="exp-sub">世界观构建 · 剧情设计 · 人设塑造</div>
+            <ul>
+                <li>创作 <strong>3篇</strong> 原创短篇小说（古言/现言/悬疑各1篇），在知乎盐选和晋江发布</li>
+                <li>悬疑短篇获知乎盐选 <strong>500+赞同</strong>，验证了<strong>"强钩子+快节奏+高反转"</strong>的叙事公式对读者的吸引力</li>
+                <li>每篇创作涵盖世界观设定、角色小传、剧情大纲、章节细纲——流程与游戏文案策划的<strong>世界观架构→角色设计→剧情脚本</strong>高度一致</li>
+            </ul>
+        </div>
+
+        <!-- 经历4：学生会 -->
+        <div class="exp">
+            <div class="exp-head">
+                <h4>院学生会组织部副部长 · 宣传委员</h4>
+                <span class="date">2022.09 — 2024.06</span>
+            </div>
+            <div class="exp-sub">活动策划 · 团队协作 · 文档标准化</div>
+            <ul>
+                <li>策划校级活动并协调 <strong>5个部门</strong> 落地，获评<strong>校级优秀</strong></li>
+                <li>牵头优化 <strong>3套</strong> 活动执行方案并梳理标准化文档模板——锻炼了<strong>策划案撰写和流程规范</strong>能力，与游戏策划的文档工作流一致</li>
+                <li>PS 制作宣传海报 <strong>20余张</strong>（获校级设计奖），撰写活动文案 <strong>50+篇</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 教育 -->
+    <div class="main-section">
+        <h3>教育背景</h3>
+        <div style="font-size:11.5px;color:var(--text-mid);">
+            <strong>普洱学院 · 园林专业 · 本科</strong> <span style="color:var(--text-light);font-size:10.5px;">2022.09 — 2026.06</span><br>
+            <span style="font-size:10.5px;color:var(--text-light);">园林中的空间叙事、视觉节奏与景观体验设计，与游戏关卡设计和世界观构建在底层逻辑上相通。系统学习了视觉美学和方案推演，熟练使用 PS 完成视觉输出。</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        感谢审阅 · 可随时到岗 · 杭州 &nbsp;·&nbsp; 1584824397@qq.com &nbsp;·&nbsp; 158-9166-4767
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
